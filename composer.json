@@ -1,0 +1,15 @@
+{
+    "name": "webprog/php-mvc-project",
+    "authors": [
+        {
+            "name": "mr mp",
+            "email": "amirmp2332@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    },
+    "require": {}
+}
