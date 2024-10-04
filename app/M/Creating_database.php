@@ -7,7 +7,7 @@ class index
  $servername = "localhost"; // نام سرور
 $username = "root"; // نام کاربری
 $password = ""; // رمز عبور
-$name = 'qw'
+$name = 'qw';
 // ایجاد اتصال
 $conn = new mysqli( $servername, $username, $password);
 
@@ -16,26 +16,33 @@ if ($conn->connect_error) {
     die("اتصال ناموفق: " . $conn->connect_error);
 }
 
-// ایجاد پایگاه داده qw
-$sql_create_db = 'CREATE DATABASE $name';
-if ($conn->query($sql_create_db) === TRUE) {
-    echo "پایگاه داده با موفقیت ایجاد شد<br>";
+$result = $conn->query("SHOW DATABASES LIKE '$name'");
+
+if ($result->num_rows > 0) {
+    return ; 
 } else {
-    echo "خطا در ایجاد پایگاه داده: " . $conn->error . "<br>";
+    $sql_create_db = "CREATE DATABASE $name";
+    if ($conn->query($sql_create_db) === TRUE) {
+      
+    }
 }
 
+
 // انتخاب پایگاه داده qw
-$conn->select_db("qw");
+$conn->select_db($name);
 
 // ایجاد جدول products با سه ستون
-$sql_products = "CREATE TABLE products (
-    product_id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    product_name VARCHAR(100) NOT NULL,
-    price DECIMAL(10, 2) NOT NULL
+$sql_products = "CREATE TABLE user (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY , 
+    email VARCHAR(100) NOT NULL,
+    usename VARCHAR(100) NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    phone VARCHAR(11) NOT NULL
+     
 )";
 
 if ($conn->query($sql_products) === TRUE) {
-    echo "جدول products با موفقیت ایجاد شد<br>";
+    
 } else {
     echo "خطا در ایجاد جدول products: " . $conn->error . "<br>";
 }
@@ -45,3 +52,4 @@ $conn->close();
 
     }
 }
+$database = new index(); 
