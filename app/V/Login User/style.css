@@ -1,0 +1,616 @@
+@import url(https://db.onlinewebfonts.com/c/068552e0b032d830e03cd78e8b6f7590?family=GT+Eesti+Pro+Display+Bold);
+@font-face {
+    font-family: "GT Eesti Pro Display Bold";
+    src: url("https://db.onlinewebfonts.com/t/068552e0b032d830e03cd78e8b6f7590.eot");
+    src: url("https://db.onlinewebfonts.com/t/068552e0b032d830e03cd78e8b6f7590.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/068552e0b032d830e03cd78e8b6f7590.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/068552e0b032d830e03cd78e8b6f7590.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/068552e0b032d830e03cd78e8b6f7590.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/068552e0b032d830e03cd78e8b6f7590.svg#GT Eesti Pro Display Bold")format("svg");
+}
+
+
+
+@font-face {
+  font-family: 'GT Eesti Pro Text';
+  src: url('GTEestiProText-ThinItalic.eot');
+  src: local('GT Eesti Pro Text Thin Italic'), local('GTEestiProText-ThinItalic'),
+      url('GTEestiProText-ThinItalic.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProText-ThinItalic.woff2') format('woff2'),
+      url('GTEestiProText-ThinItalic.woff') format('woff'),
+      url('GTEestiProText-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GT Eesti Pro Text';
+  src: url('GTEestiProText-Medium.eot');
+  src: local('GT Eesti Pro Text Medium'), local('GTEestiProText-Medium'),
+      url('GTEestiProText-Medium.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProText-Medium.woff2') format('woff2'),
+      url('GTEestiProText-Medium.woff') format('woff'),
+      url('GTEestiProText-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Eesti Pro Text';
+  src: url('GTEestiProText-LightItalic.eot');
+  src: local('GT Eesti Pro Text Light Italic'), local('GTEestiProText-LightItalic'),
+      url('GTEestiProText-LightItalic.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProText-LightItalic.woff2') format('woff2'),
+      url('GTEestiProText-LightItalic.woff') format('woff'),
+      url('GTEestiProText-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GT Eesti Pro Display';
+  src: url('GTEestiProDisplay-Bold.eot');
+  src: local('GT Eesti Pro Display Bold'), local('GTEestiProDisplay-Bold'),
+      url('GTEestiProDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProDisplay-Bold.woff2') format('woff2'),
+      url('GTEestiProDisplay-Bold.woff') format('woff'),
+      url('GTEestiProDisplay-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Eesti Pro Text';
+  src: url('GTEestiProText-Light.eot');
+  src: local('GT Eesti Pro Text Light'), local('GTEestiProText-Light'),
+      url('GTEestiProText-Light.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProText-Light.woff2') format('woff2'),
+      url('GTEestiProText-Light.woff') format('woff'),
+      url('GTEestiProText-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Eesti Pro Display';
+  src: url('GTEestiProDisplay-MediumItalic.eot');
+  src: local('GT Eesti Pro Display Medium Italic'), local('GTEestiProDisplay-MediumItalic'),
+      url('GTEestiProDisplay-MediumItalic.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProDisplay-MediumItalic.woff2') format('woff2'),
+      url('GTEestiProDisplay-MediumItalic.woff') format('woff'),
+      url('GTEestiProDisplay-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GT Eesti Pro Text';
+  src: url('GTEestiProText-RegularItalic.eot');
+  src: local('GT Eesti Pro Text Regular Italic'), local('GTEestiProText-RegularItalic'),
+      url('GTEestiProText-RegularItalic.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProText-RegularItalic.woff2') format('woff2'),
+      url('GTEestiProText-RegularItalic.woff') format('woff'),
+      url('GTEestiProText-RegularItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face
+{
+  font-family: 'GT Eesti Pro1';
+  src: url(GT\ Eesti\ Pro\ Display\ Regular1.ttf);
+}
+@font-face {
+  font-family: 'GT Eesti Pro Text Book';
+  src: url('GTEestiProText-Book.eot');
+  src: local('GT Eesti Pro Text Book'), local('GTEestiProText-Book'),
+      url('GTEestiProText-Book.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProText-Book.woff2') format('woff2'),
+      url('GTEestiProText-Book.woff') format('woff'),
+      url('GTEestiProText-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Eesti Pro Text';
+  src: url('GTEestiProText-BoldItalic.eot');
+  src: local('GT Eesti Pro Text Bold Italic'), local('GTEestiProText-BoldItalic'),
+      url('GTEestiProText-BoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProText-BoldItalic.woff2') format('woff2'),
+      url('GTEestiProText-BoldItalic.woff') format('woff'),
+      url('GTEestiProText-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GT Eesti Pro Text';
+  src: url('GTEestiProText-UltraLightItalic.eot');
+  src: local('GT Eesti Pro Text UltraLight Italic'), local('GTEestiProText-UltraLightItalic'),
+      url('GTEestiProText-UltraLightItalic.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProText-UltraLightItalic.woff2') format('woff2'),
+      url('GTEestiProText-UltraLightItalic.woff') format('woff'),
+      url('GTEestiProText-UltraLightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GT Eesti Pro Display';
+  src: url('GTEestiProDisplay-Thin.eot');
+  src: local('GT Eesti Pro Display Thin'), local('GTEestiProDisplay-Thin'),
+      url('GTEestiProDisplay-Thin.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProDisplay-Thin.woff2') format('woff2'),
+      url('GTEestiProDisplay-Thin.woff') format('woff'),
+      url('GTEestiProDisplay-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Eesti Pro Text';
+  src: url('GTEestiProText-Regular.eot');
+  src: local('GT Eesti Pro Text Regular'), local('GTEestiProText-Regular'),
+      url('GTEestiProText-Regular.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProText-Regular.woff2') format('woff2'),
+      url('GTEestiProText-Regular.woff') format('woff'),
+      url('GTEestiProText-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Eesti Pro Display';
+  src: url('GTEestiProDisplay-Light.eot');
+  src: local('GT Eesti Pro Display Light'), local('GTEestiProDisplay-Light'),
+      url('GTEestiProDisplay-Light.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProDisplay-Light.woff2') format('woff2'),
+      url('GTEestiProDisplay-Light.woff') format('woff'),
+      url('GTEestiProDisplay-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Eesti Pro Display';
+  src: url('GTEestiProDisplay-UltraBold.eot');
+  src: local('GT Eesti Pro Display UltraBold'), local('GTEestiProDisplay-UltraBold'),
+      url('GTEestiProDisplay-UltraBold.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProDisplay-UltraBold.woff2') format('woff2'),
+      url('GTEestiProDisplay-UltraBold.woff') format('woff'),
+      url('GTEestiProDisplay-UltraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Eesti Pro Display';
+  src: url('GTEestiProDisplay-UltraBoldItalic.eot');
+  src: local('GT Eesti Pro Display UltraBold Italic'), local('GTEestiProDisplay-UltraBoldItalic'),
+      url('GTEestiProDisplay-UltraBoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProDisplay-UltraBoldItalic.woff2') format('woff2'),
+      url('GTEestiProDisplay-UltraBoldItalic.woff') format('woff'),
+      url('GTEestiProDisplay-UltraBoldItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GT Eesti Pro Display';
+  src: url('GTEestiProDisplay-Medium.eot');
+  src: local('GT Eesti Pro Display Medium'), local('GTEestiProDisplay-Medium'),
+      url('GTEestiProDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProDisplay-Medium.woff2') format('woff2'),
+      url('GTEestiProDisplay-Medium.woff') format('woff'),
+      url('GTEestiProDisplay-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Eesti Pro Display';
+  src: url('GTEestiProDisplay-UltraLight.eot');
+  src: local('GT Eesti Pro Display UltraLight'), local('GTEestiProDisplay-UltraLight'),
+      url('GTEestiProDisplay-UltraLight.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProDisplay-UltraLight.woff2') format('woff2'),
+      url('GTEestiProDisplay-UltraLight.woff') format('woff'),
+      url('GTEestiProDisplay-UltraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Eesti Pro Display';
+  src: url('GTEestiProDisplay-RegularItalic.eot');
+  src: local('GT Eesti Pro Display Regular Italic'), local('GTEestiProDisplay-RegularItalic'),
+      url('GTEestiProDisplay-RegularItalic.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProDisplay-RegularItalic.woff2') format('woff2'),
+      url('GTEestiProDisplay-RegularItalic.woff') format('woff'),
+      url('GTEestiProDisplay-RegularItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GT Eesti Pro Display';
+  src: url('GTEestiProDisplay-LightItalic.eot');
+  src: local('GT Eesti Pro Display Light Italic'), local('GTEestiProDisplay-LightItalic'),
+      url('GTEestiProDisplay-LightItalic.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProDisplay-LightItalic.woff2') format('woff2'),
+      url('GTEestiProDisplay-LightItalic.woff') format('woff'),
+      url('GTEestiProDisplay-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GT Eesti Pro Text';
+  src: url('GTEestiProText-Bold.eot');
+  src: local('GT Eesti Pro Text Bold'), local('GTEestiProText-Bold'),
+      url('GTEestiProText-Bold.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProText-Bold.woff2') format('woff2'),
+      url('GTEestiProText-Bold.woff') format('woff'),
+      url('GTEestiProText-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Eesti Pro Text';
+  src: url('GTEestiProText-Thin.eot');
+  src: local('GT Eesti Pro Text Thin'), local('GTEestiProText-Thin'),
+      url('GTEestiProText-Thin.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProText-Thin.woff2') format('woff2'),
+      url('GTEestiProText-Thin.woff') format('woff'),
+      url('GTEestiProText-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Eesti Pro Display';
+  src: url('GTEestiProDisplay-UltraLightItalic.eot');
+  src: local('GT Eesti Pro Display UltraLight Italic'), local('GTEestiProDisplay-UltraLightItalic'),
+      url('GTEestiProDisplay-UltraLightItalic.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProDisplay-UltraLightItalic.woff2') format('woff2'),
+      url('GTEestiProDisplay-UltraLightItalic.woff') format('woff'),
+      url('GTEestiProDisplay-UltraLightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GT Eesti Pro Display';
+  src: url('GTEestiProDisplay-BoldItalic.eot');
+  src: local('GT Eesti Pro Display Bold Italic'), local('GTEestiProDisplay-BoldItalic'),
+      url('GTEestiProDisplay-BoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProDisplay-BoldItalic.woff2') format('woff2'),
+      url('GTEestiProDisplay-BoldItalic.woff') format('woff'),
+      url('GTEestiProDisplay-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GT Eesti Pro Text';
+  src: url('GTEestiProText-MediumItalic.eot');
+  src: local('GT Eesti Pro Text Medium Italic'), local('GTEestiProText-MediumItalic'),
+      url('GTEestiProText-MediumItalic.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProText-MediumItalic.woff2') format('woff2'),
+      url('GTEestiProText-MediumItalic.woff') format('woff'),
+      url('GTEestiProText-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GT Eesti Pro Text Book';
+  src: url('GTEestiProText-BookItalic.eot');
+  src: local('GT Eesti Pro Text Book Italic'), local('GTEestiProText-BookItalic'),
+      url('GTEestiProText-BookItalic.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProText-BookItalic.woff2') format('woff2'),
+      url('GTEestiProText-BookItalic.woff') format('woff'),
+      url('GTEestiProText-BookItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GT Eesti Pro Text';
+  src: url('GTEestiProText-UltraLight.eot');
+  src: local('GT Eesti Pro Text UltraLight'), local('GTEestiProText-UltraLight'),
+      url('GTEestiProText-UltraLight.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProText-UltraLight.woff2') format('woff2'),
+      url('GTEestiProText-UltraLight.woff') format('woff'),
+      url('GTEestiProText-UltraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Eesti Pro Display';
+  src: url('GTEestiProDisplay-Regular.eot');
+  src: local('GT Eesti Pro Display Regular'), local('GTEestiProDisplay-Regular'),
+      url('GTEestiProDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProDisplay-Regular.woff2') format('woff2'),
+      url('GTEestiProDisplay-Regular.woff') format('woff'),
+      url('GTEestiProDisplay-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Eesti Pro Display';
+  src: url('GTEestiProDisplay-ThinItalic.eot');
+  src: local('GT Eesti Pro Display Thin Italic'), local('GTEestiProDisplay-ThinItalic'),
+      url('GTEestiProDisplay-ThinItalic.eot?#iefix') format('embedded-opentype'),
+      url('GTEestiProDisplay-ThinItalic.woff2') format('woff2'),
+      url('GTEestiProDisplay-ThinItalic.woff') format('woff'),
+      url('GTEestiProDisplay-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+
+@font-face{
+  font-family: graphic;
+  src: url('Graphik Arabic Black.otf');
+  
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'GT Eesti Pro1';
+}
+
+body {
+  font-family: 'GT Eesti Pro1';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #222;
+}
+
+.container {
+  position: relative;
+  width: 400px;
+  border-radius: 20px 20px 0 0;
+  padding: 30px;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+  border-radius: 1px solid #111;
+  gap: 10px;
+  padding-bottom: 70px;
+  -webkit-box-reflect: below 1px
+    linear-gradient(transparent, transparent, #0005);
+}
+.container h2 {
+  color: #666;
+  font-weight: 500;
+}
+
+.container .inputArea {
+  position: relative;
+  width: 100%;
+  
+}
+
+.container .inputArea input {
+  position: relative;
+  width: 100%;
+  background: #222;
+  border: none;
+  outline: none;
+  padding: 10px;
+  color: aliceblue;
+  font-size: 1.1em;
+  border-radius: 5px;
+}
+
+.container .strengthMeter {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: #222;
+}
+
+.container .strengthMeter::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  transition: 0.5s;
+  background: #f00;
+}
+
+.container.weak .strengthMeter::before {
+  width: 10%;
+  background: #f00;
+  filter: drop-shadow(0 0 5px #f00) drop-shadow(0 0 10px #f00)
+    drop-shadow(0 0 20px #f00);
+}
+
+.container.moderate .strengthMeter::before {
+  width: 70%;
+  background: #eedc3d;
+  filter: drop-shadow(0 0 5px #eedc3d) drop-shadow(0 0 10px #eedc3d)
+    drop-shadow(0 0 20px #eedc3d);
+}
+
+.container.strong .strengthMeter::before {
+  width: 100%;
+  background: #18e605;
+  filter: drop-shadow(0 0 5px #18e605) drop-shadow(0 0 10px #18e605)
+    drop-shadow(0 0 20px #18e605);
+}
+
+.container .strengthMeter::after {
+  position: absolute;
+  top: -45px;
+  left: 30px;
+  transition: 0.5s;
+  color: aliceblue;
+}
+
+.container.container.weak .strengthMeter::after {
+  content: "Weak Password";
+  color: #f00;
+  filter: drop-shadow(0 0 5px#f00);
+}
+
+.container.container.container.moderate .strengthMeter::after {
+  content: "Moderate Password";
+  color: #eedc3d;
+  filter: drop-shadow(0 0 5px#eedc3d);
+}
+
+.container.container.container.container.strong .strengthMeter::after {
+  content: "LOGGING ...";
+  color: #18e605;
+  filter: drop-shadow(0 0 5px#18e605);
+}
+
+.show {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 100%;
+  background: #333;
+  border: 6px solid #222;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.show::before {
+  content: "Show";
+  font-size: 0.6em;
+  color: aliceblue;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.show.hide::before {
+  content: "Hide";
+}
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.eye-icon i {
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.eye-icon i.fa-eye-slash {
+  color: #f00;
+}
+.fld label {
+    position: absolute;
+    left: 0;
+    text-align: center;
+    justify-content: center;
+    padding: 0.7rem;
+    
+    pointer-events: none;
+    cursor: text;
+    background: none;
+    color: #ffffff33;
+    transition: 0.2s;
+    
+
+
+
+
+}
+.fld input{
+  transition: 0.2s ease;
+}
+.fld input:focus{
+  box-shadow: 0 0 5px rgba(0, 255, 255, 0.938), 0 0 25px rgba(0, 255, 255, 0.555), 0 0 50px rgba(0, 255, 255, 0.082);
+  transition: 0.2s ease;
+}
+.fld input:valid~label,
+.fld input:focus~label {
+    color: #ffffff;
+    transform: translateX(10px) translateY(-10px);
+    transition: 0.2s;
+    font-size: 0.7em;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    
+    font-size: 0.8rem;
+    padding: 0.1rem 0.4rem;
+    background: #333;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.938), 0 0 25px rgba(0, 255, 255, 0.555), 0 0 50px rgba(0, 255, 255, 0.082);
+}
+.btb{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+.btu{
+  width: 100%;
+  height: 2.5rem;
+  border: none;
+  color: white;
+  background-color: #222;
+  border-radius: 0.5rem;
+  transition: ease-out 0.3s;
+  font-size: 7mm;
+  outline: none;
+  
+  position: relative;
+  z-index: 1;
+  font-size: 16px;
+  
+}
+.btu:hover{
+  cursor: pointer;
+  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px rgba(0, 255, 255, 0.644), 0 0 100px rgba(0, 255, 255, 0.171);
+  color: #005bc3;
+}
+.btu:before{
+  transition: 0.2s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  
+}
+.btu:hover:before{
+  transition: 0.3s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+}
+button:focus, 
+input:focus, 
+textarea:focus {
+    outline: none;
+}
