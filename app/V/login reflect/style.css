@@ -1,4 +1,4 @@
-@import url(https://db.onlinewebfonts.com/c/068552e0b032d830e03cd78e8b6f7590?family=GT+Eesti+Pro+Display+Bold);
+/* @import url(https://db.onlinewebfonts.com/c/068552e0b032d830e03cd78e8b6f7590?family=GT+Eesti+Pro+Display+Bold);
 @font-face {
     font-family: "GT Eesti Pro Display Bold";
     src: url("https://db.onlinewebfonts.com/t/068552e0b032d830e03cd78e8b6f7590.eot");
@@ -363,10 +363,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'GT Eesti Pro1';
-}
+} */
 
 body {
-  font-family: 'GT Eesti Pro1';
+  /* font-family: 'GT Eesti Pro1'; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -613,4 +613,25 @@ button:focus,
 input:focus, 
 textarea:focus {
     outline: none;
+}
+
+.montserrat-300 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.montserrat-600 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.montserrat-700 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
