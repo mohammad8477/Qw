@@ -141,7 +141,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  z-index: 55;
+  z-index: 53;
 }
 
 .eye-icon i {
@@ -186,11 +186,10 @@ body {
     justify-content: center;
     text-align: center;
     justify-items: center;
-    z-index: 54;
     
     font-size: 0.8rem;
     padding: 0.1rem 0.4rem;
-    background-color: #333;
+    background: #333;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 255, 255, 0.938), 0 0 25px rgba(0, 255, 255, 0.555), 0 0 50px rgba(0, 255, 255, 0.082);
 }
@@ -249,32 +248,14 @@ textarea:focus {
     outline: none;
 }
 
-.montserrat-300 {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
+.logo-div{
+  width: 30%;
 }
 
-.montserrat-600 {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
+.container{
+  display: flex;
+  align-items: center;
 }
-
-.montserrat-700 {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.inputArea{
-  background-color: #222;
-  border-radius: 5px;
-}
-
 
 .pass-bg{
   background-color: white;
@@ -296,16 +277,62 @@ textarea:focus {
 }
 
 #YourPassword{
-  z-index: 50;
+  z-index: 52;
   background-color: transparent;
   transition-duration: 0.8s;
 }
 
 .pass-label{
-  z-index: 54;
+  z-index: 53;
   transition-duration: 0.8s;
+}
+
+.inputArea{
+  background-color: #222;
+  border-radius: 5px;
 }
 
 .black{
   color: #000000 !important;
+}
+
+.bottom-text{
+  width: 100%;
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+}
+
+.transition-08{
+  transition-duration:0.8s ;
+}
+
+.forgot-link:hover , .creat-link:hover{
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+ /* FONT */
+ /* <weight>: Use a value from 100 to 900 */
+
+.montserrat-300 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.montserrat-600 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.montserrat-700 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
