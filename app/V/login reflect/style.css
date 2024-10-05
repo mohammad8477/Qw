@@ -141,10 +141,11 @@ body {
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+  z-index: 55;
 }
 
 .eye-icon i {
-  color: #fff;
+  color: #000000;
   transition: all 0.2s ease;
 }
 
@@ -178,17 +179,18 @@ body {
 }
 .fld input:valid~label,
 .fld input:focus~label {
-    color: #ffffff;
+    color: #ffffff !important;
     transform: translateX(10px) translateY(-10px);
     transition: 0.2s;
     font-size: 0.7em;
     justify-content: center;
     text-align: center;
     justify-items: center;
+    z-index: 54;
     
     font-size: 0.8rem;
     padding: 0.1rem 0.4rem;
-    background: #333;
+    background-color: #333;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 255, 255, 0.938), 0 0 25px rgba(0, 255, 255, 0.555), 0 0 50px rgba(0, 255, 255, 0.082);
 }
@@ -266,4 +268,44 @@ textarea:focus {
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
+}
+
+.inputArea{
+  background-color: #222;
+  border-radius: 5px;
+}
+
+
+.pass-bg{
+  background-color: white;
+  position: absolute;
+  z-index: 50;
+  right: 0;
+  border-radius: 0 5px 5px 0;
+  height: 100%;
+  transition-duration: 0.8s;
+}
+
+.pass-bg-min{
+  width: 11%;
+}
+
+.pass-bg-full{
+  width: 100%;
+  border-radius: 5px;
+}
+
+#YourPassword{
+  z-index: 50;
+  background-color: transparent;
+  transition-duration: 0.8s;
+}
+
+.pass-label{
+  z-index: 54;
+  transition-duration: 0.8s;
+}
+
+.black{
+  color: #000000 !important;
 }

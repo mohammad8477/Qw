@@ -14,19 +14,31 @@
 <body class="montserrat-300">
 <!-- partial:index.partial.html -->
 <div class="container">
+
+  <!-- Login Text -->
   <h2 class="text-center pb-4 montserrat-700" style="color: white;">LOGIN</h2>
 
+  <!-- Email input -->
   <div class="inputArea mb-4 fld montserrat-600">
     <input class="montserrat-600 " required placeholder=" " type="email" name="dd" autocomplete="off">
     <label for="dd">email</label>
   </div>
+
+  <!-- Password input -->
   <div class="inputArea mb-4 fld montserrat-600">
-    
-    <input class="montserrat-600 " required placeholder=" " type="password" name="dd" autocomplete="off" id="YourPassword">
-    <label for="dd">password</label>
+
+    <div class="pass-bg pass-bg-min">
+    </div>
+
+    <input class="montserrat-600" required placeholder=" " type="password" name="dd" autocomplete="off" id="YourPassword">
+    <label class="pass-label" for="dd">password</label>
     <span class="eye-icon" onclick="togglePassword()"><i class="fas fa-eye"></i></span>
   </div>
+
+  <!-- Rate pass -->
   <div class="strengthMeter montserrat-700 "></div>
+
+  <!-- Login btn -->
   <div class="justify-center flex">
     <a href="https://discord.gg/2n3t5GUcyn" class="btb" target="_blank" ><button class="btu py-2 px-4 text-center justify-center">LOGIN</button></a>
   </div>

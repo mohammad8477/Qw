@@ -44,6 +44,9 @@ document.addEventListener("keyup", function (e) {
 
 let password = document.querySelector("#YourPassword");
 let show = document.querySelector(".show");
+let passBg= document.querySelector(".pass-bg");
+let passLabel=document.querySelector(".pass-label");
+
 show.onclick = function () {
   if (password.type === "password") {
     password.setAttribute("type", "text");
@@ -61,10 +64,18 @@ function togglePassword() {
     passwordInput.type = "text";
     eyeIcon.classList.remove("fa-eye");
     eyeIcon.classList.add("fa-eye-slash");
+    passBg.classList.add("pass-bg-full");
+    passBg.classList.remove("pass-bg-min");
+    password.classList.add("black")
+    passLabel.classList.add("black");
   } else {
     passwordInput.type = "password";
     eyeIcon.classList.remove("fa-eye-slash");
     eyeIcon.classList.add("fa-eye");
+    passBg.classList.remove("pass-bg-full");
+    passBg.classList.add("pass-bg-min");
+    password.classList.remove("black");
+    passLabel.classList.remove("black");
   }
 }
 
