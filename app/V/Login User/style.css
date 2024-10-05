@@ -509,10 +509,11 @@ body {
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+  z-index: 53;
 }
 
 .eye-icon i {
-  color: #fff;
+  color: #000000;
   transition: all 0.2s ease;
 }
 
@@ -546,7 +547,7 @@ body {
 }
 .fld input:valid~label,
 .fld input:focus~label {
-    color: #ffffff;
+    color: #ffffff !important;
     transform: translateX(10px) translateY(-10px);
     transition: 0.2s;
     font-size: 0.7em;
@@ -613,4 +614,69 @@ button:focus,
 input:focus, 
 textarea:focus {
     outline: none;
+}
+
+.logo-div{
+  width: 30%;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+}
+
+.pass-bg{
+  background-color: white;
+  position: absolute;
+  z-index: 50;
+  right: 0;
+  border-radius: 0 5px 5px 0;
+  height: 100%;
+  transition-duration: 0.8s;
+}
+
+.pass-bg-min{
+  width: 11%;
+}
+
+.pass-bg-full{
+  width: 100%;
+  border-radius: 5px;
+}
+
+#YourPassword{
+  z-index: 52;
+  background-color: transparent;
+  transition-duration: 0.8s;
+}
+
+.pass-label{
+  z-index: 53;
+  transition-duration: 0.8s;
+}
+
+.inputArea{
+  background-color: #222;
+  border-radius: 5px;
+}
+
+.black{
+  color: #000000 !important;
+}
+
+.bottom-text{
+  width: 100%;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+}
+
+.transition-08{
+  transition-duration:0.8s ;
+}
+
+.forgot-link:hover , .creat-link:hover{
+  color: #ffffff;
+  text-decoration: underline;
 }
