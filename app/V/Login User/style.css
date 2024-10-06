@@ -271,23 +271,19 @@ textarea:focus {
     outline: none;
 }
 
-.logo-div{
-  width: 30%;
-}
-
 .container{
   display: flex;
   align-items: center;
 }
 
 .pass-bg{
-  background-color: white;
+  background-color: rgb(131, 131, 131);
   position: absolute;
   z-index: 50;
   right: 0;
   border-radius: 0 5px 5px 0;
   height: 100%;
-  transition-duration: 0.8s;
+  transition-duration: 0.4s;
 }
 
 .pass-bg-min{
