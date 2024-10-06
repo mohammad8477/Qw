@@ -1,3 +1,27 @@
+/* FONT */
+/* <weight>: Use a value from 100 to 900 */
+
+.montserrat-300 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.montserrat-500 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.montserrat-700 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
 body{
     background-color:  #222;
 }
@@ -31,9 +55,9 @@ body{
 .my-btn{
     background-color: #222;
     color:white ;
-    border-radius: 0;
-    border:0 ;
+    border: 0;
     padding: 0.5rem 1.5rem ;
+    transition-duration: 0.8s;
 }
 
 .phone-btn{
@@ -47,4 +71,204 @@ body{
 .active{
     box-shadow: 0 0 5px rgba(0, 255, 255, 0.938), 0 0 25px rgba(0, 255, 255, 0.555), 0 0 50px rgba(0, 255, 255, 0.082);
     color: rgba(0, 255, 255, 0.938);
+}
+
+.zindex-52{
+    z-index: 52;
+}
+
+
+
+/* For inputs */
+.fld label {
+    position: absolute;
+    left: 0;
+    text-align: center;
+    justify-content: center;
+    padding: 0.7rem;
+    
+    pointer-events: none;
+    cursor: text;
+    background: none;
+    color: #ffffff33;
+    transition: 0.2s;
+    
+
+
+
+
+}
+.fld input{
+    transition: 0.2s ease;
+}
+.fld input:focus{
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.938), 0 0 25px rgba(0, 255, 255, 0.555), 0 0 50px rgba(0, 255, 255, 0.082);
+    transition: 0.2s ease;
+}
+.fld input:valid~label,
+.fld input:focus~label {
+    color: #ffffff !important;
+    transform: translateX(10px) translateY(-10px);
+    transition: 0.2s;
+    font-size: 0.7em;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    
+    font-size: 0.8rem;
+    padding: 0.1rem 0.4rem;
+    background: #333;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.938), 0 0 25px rgba(0, 255, 255, 0.555), 0 0 50px rgba(0, 255, 255, 0.082);
+}
+
+.container .inputArea {
+    position: relative;
+    width: 100%;
+    
+}  
+
+.container .inputArea input {
+    position: relative;
+    width: 100%;
+    background: #222;
+    border: none;
+    outline: none;
+    padding: 10px;
+    color: aliceblue;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
+
+/* For Password input */
+.inputArea{
+    background-color: #222;
+    border-radius: 5px;
+}
+
+.pass-bg{
+    background-color: white;
+    position: absolute;
+    z-index: 50;
+    right: 0;
+    border-radius: 0 5px 5px 0;
+    height: 100%;
+    transition-duration: 0.8s;
+}
+
+.pass-bg-min{
+    width: 15%;
+}
+
+.pass-bg-full{
+    width: 100%;
+    border-radius: 5px;
+}
+
+#YourPassword{
+    z-index: 52;
+    background-color: transparent;
+    transition-duration: 0.8s;
+}
+
+.pass-label{
+    z-index: 53;
+    transition-duration: 0.8s;
+}
+
+.black{
+    color: #000000 !important;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 53;
+}
+
+.eye-icon i {
+    color: #000000;
+    transition: all 0.2s ease;
+}
+
+.eye-icon i.fa-eye-slash {
+    color: #f00;
+}
+
+.transition-08{
+    transition-duration:0.8s ;
+}
+
+#repeat-password{
+    background-color: #222;
+    /* box-shadow: 0 0 5px rgba(255, 0, 0, 0.938), 0 0 25px rgba(255, 255, 255, 0.555), 0 0 50px rgba(0, 255, 255, 0.082); */
+}
+
+#repeat-input{
+    background-color: transparent;
+    transition-duration: 0.8s;
+}
+
+.error-repeat{
+    text-shadow: 0px 0px 7px rgb(255, 0, 0) , 0px 0px 15px rgba(255, 0, 0, 0.87) , 0px 0px 30px rgba(255, 0, 0, 0.692) ;
+    color: #f00;
+}
+
+/* For creat button */
+.btb{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+.btu{
+    width: 100%;
+    height: 2.5rem;
+    border: none;
+    color: white;
+    background-color: #222;
+    border-radius: 0.5rem;
+    transition: ease-out 0.3s;
+    font-size: 7mm;
+    outline: none;
+    
+    position: relative;
+    z-index: 1;
+    font-size: 16px;
+    
+}
+.btu:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px rgba(0, 255, 255, 0.644), 0 0 100px rgba(0, 255, 255, 0.171);
+    color: #005bc3;
+}
+.btu:before{
+    transition: 0.2s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    
+}
+.btu:hover:before{
+    transition: 0.3s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+}
+button:focus, 
+input:focus, 
+textarea:focus {
+    outline: none;
 }

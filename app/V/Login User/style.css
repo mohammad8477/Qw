@@ -1,3 +1,27 @@
+/* FONT */
+/* <weight>: Use a value from 100 to 900 */
+
+.montserrat-300 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.montserrat-600 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.montserrat-700 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
 body {
   display: flex;
   align-items: center;
@@ -14,7 +38,6 @@ body {
   background: #333;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   flex-direction: column;
   border-radius: 1px solid #111;
   gap: 10px;
@@ -313,26 +336,3 @@ textarea:focus {
   text-decoration: underline;
 }
 
- /* FONT */
- /* <weight>: Use a value from 100 to 900 */
-
-.montserrat-300 {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.montserrat-600 {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.montserrat-700 {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
