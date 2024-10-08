@@ -26,12 +26,12 @@
         <div class="w-75 w-md-50 d-flex flex-column justify-content-center align-items-center">
 
             <!-- Creat Text -->
-            <div class="text-danger top-text">
+            <div class="text-danger top-text m-0 p-0">
                 <span class="text-white ">Creat an <span class="text-account">account</span></span>
             </div>
 
             <!-- Button for phone or email -->
-            <div class="mt-4 d-flex">
+            <div class="mt-2 d-flex">
                 <button class="my-btn phone-btn active " onclick="toggleBtn(this)">Phone</button>
                 <button class="my-btn email-btn " onclick="toggleBtn(this)">Email</button>
             </div>
@@ -40,25 +40,25 @@
             <div class="inputs-div">
 
                 <!-- Name input -->
-                <div class="inputArea mb-3 mt-4 fld">
+                <div class="inputArea mb-2-5 mt-3 fld">
                     <input required placeholder=" " type="text" name="dd" autocomplete="off">
                     <label for="dd">Username</label>
                 </div>
 
                 <!-- Email input -->
-                <div class="inputArea mb-3  fld d-none" id="email-input">
+                <div class="inputArea mb-2-5  fld d-none" id="email-input">
                     <input required placeholder=" " type="text" name="dd" autocomplete="off">
                     <label for="dd">Email</label>
                 </div>
 
                 <!-- phone input -->
-                <div class="inputArea mb-3  fld" id="phone-input">
+                <div class="inputArea mb-2-5  fld" id="phone-input">
                     <input required placeholder=" " type="number" name="dd" autocomplete="off">
                     <label for="dd">Phone number</label>
                 </div>
 
                 <!-- Password input -->
-                <div class="inputArea mb-3 fld">
+                <div class="inputArea mb-2-5 fld">
 
                     <div class="pass-bg pass-bg-min">
                     </div>
@@ -69,18 +69,42 @@
                 </div>
 
                 <!-- Repeatpassword input -->
-                <div class="inputArea mb-3  fld" id="repeat-input">
+                <div class="inputArea mb-2-5  fld" id="repeat-input">
                     <input onkeyup="repeatComparator()" required placeholder=" " type="password" name="dd" autocomplete="off" id="repeat-password">
                     <label for="dd">Repeat password</label>
                     <div class="position-absolute montserrat-500 error-div d-none"><span class="error-repeat">The Repeat is not match</span></div>
                 </div>
 
-                <!-- Creat Button -->
-                <div class="d-flex mt-5 justify-content-center">
-                    <a href="https://discord.gg/2n3t5GUcyn" class="btb text-decoration-none w-50" target="_blank" ><button class="btu py-2 px-4 text-center justify-center">LOGIN</button></a>
+            </div>
+
+            <!-- Captcha -->
+            <div class="d-flex align-items-center mt-3 justify-content-md-between w-75 mb-2">
+
+                <!-- Password input -->
+                <div class="inputArea ms-3  w-50 fld" id="phone-input">
+                    <input required placeholder=" " type="text" name="dd" autocomplete="off">
+                    <label for="dd">Captcha</label>
+                </div>
+
+                <!-- Image -->
+                <div class="my-w me-3  d-flex justify-content-center align-items-center">
+                    <button class="ref-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"/>
+                            <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"/>
+                        </svg>
+                    </button>
+                    <img class="w-100" src="G_DATA_Blog_CaptchaDissolve_Preview_52a6e13490_11zon.webp" alt="">
                 </div>
 
             </div>
+
+            <!-- Creat Button -->
+            <div class="d-flex mt-3 justify-content-center ">
+                <a href="https://discord.gg/2n3t5GUcyn" class="btb  text-decoration-none w-100" target="_blank" ><button class="my-btu py-2 px-4 text-center justify-center">LOGIN</button></a>
+            </div>
+
+
 
         </div>
 
