@@ -331,3 +331,18 @@ textarea:focus {
   color: #ffffff;
   text-decoration: underline;
 }
+
+.my-w{
+  width: 45%;
+}
+
+.ref-btn{
+  background-color: transparent;
+  color: white;
+  border: 0;
+}
+
+#captcha-input{
+  background-color: transparent;
+  width: 40%;
+}
