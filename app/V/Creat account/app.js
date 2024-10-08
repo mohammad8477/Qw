@@ -4,16 +4,16 @@ let emailInput=document.querySelector("#email-input");
 let phoneInput=document.querySelector("#phone-input");
 
 const toggleBtn= (x)=>{
-    x.classList.add("active");
     x.classList.remove("zindex-52");
+    x.classList.add("active");
     if( x== phoneBtn){
-        emailBtn.classList.remove("active");
         emailBtn.classList.add("zindex-52");
+        emailBtn.classList.remove("active");
         emailInput.classList.add("d-none");
         phoneInput.classList.remove("d-none");
     }else if(x== emailBtn){
-        phoneBtn.classList.remove("active");
         phoneBtn.classList.add("zindex-52");
+        phoneBtn.classList.remove("active");
         emailInput.classList.remove("d-none");
         phoneInput.classList.add("d-none");
     }

@@ -15,14 +15,14 @@
 <!-- partial:index.partial.html -->
 <div class="container ">
 
-  <!-- Logo -->
-  <div class="logo-div">
-    <img src="Untitled-3.svg" alt="Logo">
+  <!-- Text -->
+  <div class="logo-div w-full flex justify-center mb-5">
+    <span class="text-white montserrat-600 ">Login</span>
   </div>
 
   <!-- Email input -->
   <div class="inputArea mb-4 fld montserrat-600">
-    <input required placeholder=" " type="email" name="dd" autocomplete="off">
+    <input class="email-label" required valid  placeholder=" " type="text" name="dd" autocomplete="off">
     <label for="dd">email or phone number</label>
   </div>
 
@@ -39,10 +39,32 @@
 
   
   <!-- Rate pass -->
-  <div class="strengthMeter montserrat-700 "></div>
+  <!-- <div class="strengthMeter montserrat-700 "></div> -->
+
+  <!-- Captcha -->
+  <div class="flex mt-3 justify-between  mb-3">
+
+    <!-- Password input -->
+    <div class="inputArea ms-3   fld" id="captcha-input">
+        <input required placeholder=" " type="text" name="dd" autocomplete="off">
+        <label for="dd">Captcha</label>
+    </div>
+
+    <!-- Image -->
+    <div class="my-w flex mr-6 ">
+        <button class="ref-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"/>
+                <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"/>
+            </svg>
+        </button>
+        <img class="w-100 rounded-md" src="G_DATA_Blog_CaptchaDissolve_Preview_52a6e13490_11zon.webp" alt="">
+    </div>
+
+</div>
 
   <!-- Login btn -->
-  <div class="justify-center flex">
+  <div class="justify-center flex mb-5">
     <a href="https://discord.gg/2n3t5GUcyn" class="btb" target="_blank" ><button class="btu py-2 px-4 text-center justify-center">LOGIN</button></a>
   </div>
 
@@ -53,7 +75,7 @@
     </div>
 
     <div>
-      <a class="creat-link transition-08" href="">Don't have an accounr?</a>
+      <a class="creat-link transition-08" href="../Creat account/index.html">Don't have an accounr?</a>
     </div>
   </div>
 

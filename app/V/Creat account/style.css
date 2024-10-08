@@ -147,7 +147,7 @@ body{
 }
 
 .pass-bg{
-    background-color: white;
+    background-color: rgb(131, 131, 131);
     position: absolute;
     z-index: 50;
     right: 0;
@@ -226,7 +226,7 @@ body{
     align-items: center;
     text-align: center;
 }
-.btu{
+.my-btu{
     width: 100%;
     height: 2.5rem;
     border: none;
@@ -242,12 +242,12 @@ body{
     font-size: 16px;
     
 }
-.btu:hover{
+.my-btu:hover{
     cursor: pointer;
     box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px rgba(0, 255, 255, 0.644), 0 0 100px rgba(0, 255, 255, 0.171);
     color: #005bc3;
 }
-.btu:before{
+.my-btu:before{
     transition: 0.2s all ease;
     position: absolute;
     top: 0;
@@ -260,15 +260,37 @@ body{
     border-radius: 0.5rem;
     
 }
-.btu:hover:before{
+.my-btu:hover:before{
     transition: 0.3s all ease;
     left: 0;
     right: 0;
     opacity: 1;
     z-index: -1;
 }
-button:focus, 
+
 input:focus, 
 textarea:focus {
     outline: none;
+}
+
+.text-account{
+    color:rgba(0, 255, 255, 0.644) ;
+}
+
+.w-60{
+    width: 60%;
+}
+
+.mb-2-5{
+    margin-bottom: 12px;
+}
+
+.my-w{
+    width: 30%;
+}
+
+.ref-btn{
+    background-color: transparent;
+    border: 0;
+    color: white;
 }
