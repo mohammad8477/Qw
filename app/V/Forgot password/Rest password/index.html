@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tialwind -->
+    <link rel="stylesheet" href="../../../../src/output.css">
+    <link rel="stylesheet" href="../Enter p Or e/style.css">
+    <link rel="Icon" href="../../Creat account/Untitled-3.svg">
+    <title>Reset password</title>
+</head>
+<body class="bg-[#222] h-screen flex justify-center items-center">
+
+    <section class="bg-[#333]  mx-auto w-96 h-80 rounded-xl absolute">
+
+        <!-- Text -->
+        <div class="absolute w-full flex flex-wrap justify-center items-center text-white mt-7">
+            <span class="w-full text-center montserrat-600 reset ">Reset password</span>
+        </div>
+
+
+        <!-- Inputs -->
+        <div class="absolute w-full flex justify-center mt-24 montserrat-400">
+            <div class="w-3/5 flex">
+                <input required class="absolute px-5 py-3   rounded-md bg-[#222] text-white outline-none my-input transition" type="password" id="Input">
+                <label class="relative cursor-text  pointer-events-none px-4 py-3 text-[#ffffff33]" for="input" id="laleb-input">Password</label>
+            </div>
+        </div>
+
+        <div class="absolute w-full flex justify-center mt-40 montserrat-400">
+            <div class="w-3/5 flex">
+                <input required class="absolute px-5 py-3   rounded-md bg-[#222] text-white outline-none my-input transition" onkeyup="repeatCompartor()" type="password" id="resetInput">
+                <label class="relative cursor-text  pointer-events-none px-4 py-3 text-[#ffffff33]" for="resetInput" id="laleb-input">Reset Password</label>
+            </div>
+        </div>
+
+        <div class="absolute w-full text-center text-red-600 mt-52 my-shadow ">
+            <span class="text-compartor hidden transition">
+                The repeat is not match!
+            </span>
+        </div>
+
+        <!-- Btn -->
+        <div class="bg-transparent w-full mt-64 h-11 relative flex justify-center items-center " >
+
+            <a class="bg-[#222] text-white px-7 py-3 rounded-md montserrat-400 hover:bg-white  hover:text-blue-800" href="" id="my-btn">
+                <button >
+                    Reset
+                </button>
+            </a>
+
+        </div>
+
+    </section>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

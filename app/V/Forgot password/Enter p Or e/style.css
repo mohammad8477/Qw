@@ -13,9 +13,12 @@
   }
 
 #laleb-input{
-    left: -9%;
     border-radius: 5px;
     transition: 0.4s;
+}
+
+.left-999{
+  left: -9%;
 }
 
 .my-input:focus{
@@ -45,4 +48,16 @@
 
 #my-btn:hover{
     box-shadow: 0 0 5px rgba(0, 255, 255, 0.938), 0 0 25px rgba(0, 255, 255, 0.555), 0 0 50px rgba(0, 255, 255, 0.082);
+}
+
+.reset{
+  font-size: 1.5rem;
+}
+
+.my-shadow{
+  text-shadow: 0px 0px 5px red , 0px 0px 10px rgba(255, 0, 0, 0.6) , 0px 0px 5px rgba(255, 0, 0, 0.4);
+}
+
+.transition-4{
+  transition-duration: 0.4s !important;
 }
