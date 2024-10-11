@@ -161,14 +161,14 @@
                     <i class="fas fa-box-open text-orange-400 mr-2"></i>Products
                 </h2>
 
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg bg-[#242424]">
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg  bg-[#1f2937]">
     <div class="flex flex-column sm:flex-row flex-wrap space-y-4 sm:space-y-0 items-center justify-between pb-4 ms-2 mt-2">
         <label for="table-search" class="sr-only">Search</label>
         <div class="relative">
             <div class="absolute inset-y-0 rtl:inset-r-0 rtl:right-0 flex items-center  ps-3 pointer-events-none rounded-s-md bgcc borderless pe-2">
                 <svg class="w-5 h-5  text-gray-500 dark:text-gray-400" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
             </div>
-            <input type="text" onkeyup="searchItem()" id="table-search" class="block bgcc p-2 ps-10 text-sm rounded-lg w-80 borderless text-white bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for items">
+            <input type="text" onkeyup="searchItem()" id="table-search" class="block bgcc  p-2 ps-12 text-sm rounded-lg w-80 borderless text-white bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for items">
         </div>
 
         <!-- creat Button -->
@@ -180,7 +180,7 @@
     </div>
     <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 ">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 ">
-            <tr class="bg-[#242424]">
+            <tr class="bg-[#1f2937]">
                 <th scope="col" class="p-4 borderless onvisible">
                     <div class="flex items-center">
                         <input id="checkbox-all-search" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
@@ -319,25 +319,25 @@
                 </td>
             </tr>
             <tr class="bg-white dark:bg-gray-800 hover dark:hover:bg-gray-600 bgcc ">
-                <td class="w-4 p-4 borderless">
+                <td class="w-4 p-4 ">
                     <div class="flex items-center">
                         <input id="checkbox-table-3" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                         <label for="checkbox-table-3" class="sr-only">checkbox</label>
                     </div>
                 </td>
-                <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white borderless item-name">
+                <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white  item-name">
                     Apple iMac 27"
                 </th>
-                <td class="px-6 py-4 borderless item-color">
+                <td class="px-6 py-4 item-color">
                     Silver
                 </td>
-                <td class="px-6 py-4 borderlessc item-cate">
+                <td class="px-6 py-4  item-cate">
                     PC Desktop
                 </td>
-                <td class="px-6 py-4 borderless item-price">
+                <td class="px-6 py-4 item-price">
                     $3999
                 </td>
-                <td class="px-6 py-4 borderless" onclick="toggleEdit() , edititem(this)">
+                <td class="px-6 py-4" onclick="toggleEdit() , edititem(this)">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
