@@ -7,6 +7,14 @@ namespace Composer\Autoload;
 class ComposerStaticInit5f32c2bc689b454bcbb961eb2dd718f4
 {
     public static $prefixLengthsPsr4 = array (
+        'S' => 
+        array (
+            'Symfony\\Component\\Finder\\' => 25,
+        ),
+        'G' => 
+        array (
+            'Gregwar\\' => 8,
+        ),
         'A' => 
         array (
             'App\\' => 4,
@@ -14,6 +22,14 @@ class ComposerStaticInit5f32c2bc689b454bcbb961eb2dd718f4
     );
 
     public static $prefixDirsPsr4 = array (
+        'Symfony\\Component\\Finder\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/finder',
+        ),
+        'Gregwar\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/gregwar/captcha/src/Gregwar',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',

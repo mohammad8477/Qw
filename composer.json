@@ -11,5 +11,8 @@
             "App\\": "app/"
         }
     },
-    "require": {}
+    "require": {
+        "gregwar/captcha": "1.2.1"
+    }
+
 }
