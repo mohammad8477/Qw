@@ -1,0 +1,8 @@
+.my-shadow:hover{
+    text-shadow:  0 0 5px rgba(0, 255, 255, 0.938), 0 0 25px rgba(0, 255, 255, 0.555), 0 0 50px rgba(0, 255, 255, 0.082);
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.938), 0 0 25px rgba(0, 255, 255, 0.555), 0 0 50px rgba(0, 255, 255, 0.082) ;
+}
+
+.my-shadow{
+    transition-duration: 0.4s;
+}
