@@ -41,20 +41,20 @@
 
                 <!-- Name input -->
                 <div class="inputArea mb-2-5 mt-3 fld">
-                    <input required placeholder=" " type="text" name="dd" autocomplete="off">
-                    <label for="dd">Username</label>
+                    <input required placeholder=" " type="text" name="name-input" autocomplete="off">
+                    <label for="name-input">Username</label>
                 </div>
 
                 <!-- Email input -->
                 <div class="inputArea mb-2-5  fld d-none" id="email-input">
-                    <input required placeholder=" " type="text" name="dd" autocomplete="off">
-                    <label for="dd">Email</label>
+                    <input required placeholder=" " type="text" name="email-input" autocomplete="off">
+                    <label for="email-input">Email</label>
                 </div>
 
                 <!-- phone input -->
                 <div class="inputArea mb-2-5  fld" id="phone-input">
-                    <input required placeholder=" " type="number" name="dd" autocomplete="off">
-                    <label for="dd">Phone number</label>
+                    <input required placeholder=" " type="number" name="phone-input" autocomplete="off">
+                    <label for="phone-input">Phone number</label>
                 </div>
 
                 <!-- Password input -->
@@ -63,15 +63,15 @@
                     <div class="pass-bg pass-bg-min">
                     </div>
                 
-                    <input class="montserrat-500" required placeholder=" " type="password" name="dd" autocomplete="off" id="YourPassword">
-                    <label class="pass-label" for="dd">password</label>
+                    <input class="montserrat-500" required placeholder=" " type="password" name="password-input" autocomplete="off" id="YourPassword">
+                    <label class="pass-label" for="password-input">password</label>
                     <span class="eye-icon" onclick="togglePassword()"><i class="fas fa-eye"></i></span>
                 </div>
 
                 <!-- Repeatpassword input -->
                 <div class="inputArea mb-2-5  fld" id="repeat-input">
-                    <input onkeyup="repeatComparator()" required placeholder=" " type="password" name="dd" autocomplete="off" id="repeat-password">
-                    <label for="dd">Repeat password</label>
+                    <input onkeyup="repeatComparator()" required placeholder=" " type="password" name="repeat-input" autocomplete="off" id="repeat-password">
+                    <label for="repeat-input">Repeat password</label>
                     <div class="position-absolute montserrat-500 error-div d-none"><span class="error-repeat">The Repeat is not match</span></div>
                 </div>
 
@@ -82,8 +82,8 @@
 
                 <!-- Password input -->
                 <div class="inputArea ms-3  w-50 fld" id="phone-input">
-                    <input required placeholder=" " type="text" name="dd" autocomplete="off">
-                    <label for="dd">Captcha</label>
+                    <input required placeholder=" " type="text" name="captcha-input" autocomplete="off">
+                    <label for="captcha-input">Captcha</label>
                 </div>
 
                 <!-- Image -->

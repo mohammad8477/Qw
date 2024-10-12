@@ -4,13 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"  rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body class="bg-gray-900 text-white">
+
+
+
+    <!-- Creat Item page -->
+    <div class="fixed h-screen w-screen flex items-center justify-center my-bg z-50 transition-4 hidden" id="div-creat">
+        <div class="absolute w-96 h-96 bg-[#181818] rounded-md">
+
+            <!-- Close icon -->
+            <div class="w-full">
+                <button  onclick="toggleDisplay()" class="w-2/12">
+                    <svg class="w-3/5 h-full" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                    </svg>
+                </button>
+                
+            </div>
+
+            <!-- Input Name -->
+            <div class="w-full flex items-center justify-center">
+                <input required class=" absolute w-3/4 rounded-md bg-[#333] border-0 input" id="input-name" name="input-name" type="text">
+                <label class= "relative transition-4 text-[#00ffff] pointer-events-none" for="input-name" id="name-label">Product Name</label>>
+            </div>
+
+            <!-- input color -->
+            <div class=" w-full flex items-center justify-center mt-11">
+                <input required class=" absolute w-3/4 rounded-md bg-[#333] border-0 input" id="input-color" name="input-color" type="text">
+                <label class= "relative transition-4 text-[#00ffff] pointer-events-none " for="input-color" id="color-label">Product Color</label>
+            </div>
+
+            <!-- input categori -->
+            <div class="w-full flex items-center justify-center mt-11">
+                <input required class=" absolute w-3/4 rounded-md bg-[#333] border-0 input" id="input-categori" name="input-categori" type="text">
+                <label class= "relative transition-4 text-[#00ffff] pointer-events-none " for="input-categori" id="categori-label">Product Category</label>
+            </div>
+
+            <!-- Input price -->
+            <div class="w-full flex items-center justify-center mt-11">
+                <input required class=" absolute w-3/4 rounded-md bg-[#333] border-0 input" id="input-price" name="input-price" type="number">
+                <label class= "relative transition-4 text-[#00ffff] pointer-events-none " for="input-price" id="price-label">Product price</label>
+                <div class="absolute mt-14 text-red-600 my-shadow error hidden">
+                    <span>Please compelete all the sections!</span>
+                </div>
+            </div>
+
+            <!-- Creat button  -->
+            <div onclick="creatitem()" class="flex items-center justify-center w-full  mt-9">
+                <button class=" bg-[#333] px-9 py-3 rounded-md transition-4 hover:bg-white hover:text-[#3dcfcf]">
+                    Creat
+                </button>
+            </div>
+            
+
+        </div>
+    </div>
+
+    <!-- Edit Item page -->
+    <div class="fixed h-screen w-screen flex items-center justify-center my-bg z-50 transition-4 hidden " id="div-edit">
+        <div class="absolute w-96 h-96 bg-[#181818] rounded-md">
+
+            <!-- Close icon -->
+            <div class="w-full">
+                <button  onclick="toggleEdit() , editBtn()" class="w-2/12">
+                    <svg class="w-3/5 h-full" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                    </svg>
+                </button>
+                
+            </div>
+
+            <!-- Input Name -->
+            <div class="w-full flex items-center justify-center">
+                <input required class=" absolute w-3/4 rounded-md bg-[#333] border-0 input" id="input-name-1" name="input-name-1" type="text">
+                <label class= "relative transition-4 text-[#00ffff] pointer-events-none" for="input-name-1" id="name-label">Product Name</label>>
+            </div>
+
+            <!-- input color -->
+            <div class=" w-full flex items-center justify-center mt-11">
+                <input required class=" absolute w-3/4 rounded-md bg-[#333] border-0 input" id="input-color-1" name="input-color-1" type="text">
+                <label class= "relative transition-4 text-[#00ffff] pointer-events-none " for="input-color-1" id="color-label">Product Color</label>
+            </div>
+
+            <!-- input categori -->
+            <div class="w-full flex items-center justify-center mt-11">
+                <input required class=" absolute w-3/4 rounded-md bg-[#333] border-0 input" id="input-categori-1" name="input-categori-1" type="text">
+                <label class= "relative transition-4 text-[#00ffff] pointer-events-none " for="input-categori-1" id="categori-label">Product Category</label>
+            </div>
+
+            <!-- Input price -->
+            <div class="w-full flex items-center justify-center mt-11">
+                <input required class=" absolute w-3/4 rounded-md bg-[#333] border-0 input" id="input-price-1" name="input-price-1" type="number">
+                <label class= "relative transition-4 text-[#00ffff] pointer-events-none " for="input-price-1" id="price-label">Product price</label>
+                <div class="absolute mt-14 text-red-600 my-shadow error hidden">
+                    <span>Please compelete all the sections!</span>
+                </div>
+            </div>
+
+            <!--  Edit button  -->
+            <div onclick="editBtn()" class="flex items-center justify-center w-full  mt-9">
+                <button class=" bg-[#333] px-9 py-3 rounded-md transition-4 hover:bg-white hover:text-[#3dcfcf]">
+                    Edit
+                </button>
+            </div>
+            
+
+        </div>
+    </div>
 
     
     <div class="flex">
@@ -22,23 +128,11 @@
                 <a href="panel.html" class="nav-link flex items-center select">
                     <i class="fas fa-chart-bar"></i> Dashboard
                 </a>
-                <a href="#" class="nav-link flex items-center select">
-                    <i class="fas fa-file-alt"></i> Subscriptions
-                </a>
                 <a href="#" class="nav-link active flex items-center select">
                     <i class="fas fa-box"></i> Products
                 </a>
-                <a href="#" class="nav-link flex items-center select">
-                    <i class="fas fa-tag"></i> Coupons
-                </a>
-                <a href="#" class="nav-link flex items-center select">
-                    <i class="fas fa-shopping-cart"></i> Orders
-                </a>
                 <a href="panel-users.html" class="nav-link flex items-center select">
                     <i class="fas fa-users-cog"></i> Users
-                </a>
-                <a href="#" class="nav-link flex items-center select">
-                    <i class="fas fa-star"></i> Reviews
                 </a>
                 <a href="#" class="nav-link flex items-center select">
                     <i class="fas fa-balance-scale"></i> Balances
@@ -53,32 +147,41 @@
 
         
         
-        <main class="w-4/5 p-6">
-            <header class="mb-8">
+        <main class="w-4/5 p-6 ">
+
+            <!-- Text out of the  box -->
+            <header class="mb-8 ">
                 <h1 class="text-4xl font-bold">Overview</h1>
                 <p>Your products</p>
             </header>
 
-            <section class="bg-gray-800 p-6 rounded-lg bgnew">
+            <!-- text in the box -->
+            <section class="p-6 rounded-lg bgnew bg-[#181818]">
                 <h2 class="text-xl mb-4 flex items-center">
                     <i class="fas fa-box-open text-orange-400 mr-2"></i>Products
                 </h2>
-                
 
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-    <div class="flex flex-column sm:flex-row flex-wrap space-y-4 sm:space-y-0 items-center justify-between pb-4">
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg  bg-[#1f2937]">
+    <div class="flex flex-column sm:flex-row flex-wrap space-y-4 sm:space-y-0 items-center justify-between pb-4 ms-2 mt-2">
         <label for="table-search" class="sr-only">Search</label>
         <div class="relative">
-            <div class="absolute inset-y-0 left-0 rtl:inset-r-0 rtl:right-0 flex items-center ps-3 pointer-events-none bgcc borderless">
-                <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+            <div class="absolute inset-y-0 rtl:inset-r-0 rtl:right-0 flex items-center  ps-3 pointer-events-none rounded-s-md bgcc borderless pe-2">
+                <svg class="w-5 h-5  text-gray-500 dark:text-gray-400" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
             </div>
-            <input type="text" id="table-search" class="block bgcc p-2 ps-10 text-sm text-gray-900 rounded-lg w-80 borderless text-white bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for items">
+            <input type="text" onkeyup="searchItem()" id="table-search" name="table-search" class="block bgcc  p-2 ps-12 text-sm rounded-lg w-80 borderless text-white bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for items">
+        </div>
+
+        <!-- creat Button -->
+        <div  onclick="toggleDisplay()" class=" me-3 bg-[#181818] py-2 px-3 rounded-md transition-4 text-white hover:bg-white hover:text-[#31bdbd]">
+            <button class=" ">
+                Creat Item
+            </button>
         </div>
     </div>
-    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr class="bgcc">
-                <th scope="col" class="p-4 borderless">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 ">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 ">
+            <tr class="bg-[#1f2937]">
+                <th scope="col" class="p-4 borderless onvisible">
                     <div class="flex items-center">
                         <input id="checkbox-all-search" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                         <label for="checkbox-all-search" class="sr-only">checkbox</label>
@@ -100,95 +203,95 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover dark:hover:bg-gray-600 bgcc">
+            <tr class=" border-b dark:bg-gray-800 dark:border-gray-700 hover dark:hover:bg-gray-600 bg-[#242424]">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                        <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                        <input id="checkbox-table-search" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="checkbox-table-search" class="sr-only">checkbox</label>
                     </div>
                 </td>
-                <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white">
+                <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white item-name">
                     Apple MacBook Pro 17"
                 </th>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 item-color">
                     Silver
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 item-cate">
                     Laptop
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 item-price">
                     $2999
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4" onclick="toggleEdit() , edititem(this)">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover dark:hover:bg-gray-600 bgcc">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="checkbox-table-search-2" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                        <label for="checkbox-table-search-2" class="sr-only">checkbox</label>
+                        <input id="checkbox-table-search" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="checkbox-table-search" class="sr-only">checkbox</label>
                     </div>
                 </td>
-                <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white">
+                <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white item-name">
                     Microsoft Surface Pro
                 </th>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 item-color">
                     White
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 item-cate">
                     Laptop PC
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 item-price">
                     $1999
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4" onclick="toggleEdit() , edititem(this)">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover dark:hover:bg-gray-600 bgcc">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="checkbox-table-search-3" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                        <label for="checkbox-table-search-3" class="sr-only">checkbox</label>
+                        <input id="checkbox-table-search" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="checkbox-table-search" class="sr-only">checkbox</label>
                     </div>
                 </td>
-                <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white">
+                <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white item-name">
                     Magic Mouse 2
                 </th>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 item-color">
                     Black
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 item-cate">
                     Accessories
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 item-price">
                     $99
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4" onclick="toggleEdit() , edititem(this)">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover dark:hover:bg-gray-600 bgcc">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="checkbox-table-3" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                        <label for="checkbox-table-3" class="sr-only">checkbox</label>
+                        <input id="checkbox-table" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="checkbox-table" class="sr-only">checkbox</label>
                     </div>
                 </td>
-                <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white">
+                <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white item-name">
                     Apple Watch
                 </th>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 item-color">
                     Silver
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 item-cate">
                     Accessories
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 item-price">
                     $179
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4" onclick="toggleEdit() , edititem(this)">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
@@ -199,42 +302,42 @@
                         <label for="checkbox-table-3" class="sr-only">checkbox</label>
                     </div>
                 </td>
-                <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white">
+                <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white item-name">
                     iPad
                 </th>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 item-color">
                     Gold
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 item-cate">
                     Tablet
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 item-price">
                     $699
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4" onclick="toggleEdit() , edititem(this)">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="bg-white dark:bg-gray-800 hover dark:hover:bg-gray-600 bgcc">
-                <td class="w-4 p-4 borderless">
+            <tr class="bg-white dark:bg-gray-800 hover dark:hover:bg-gray-600 bgcc ">
+                <td class="w-4 p-4 ">
                     <div class="flex items-center">
                         <input id="checkbox-table-3" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                         <label for="checkbox-table-3" class="sr-only">checkbox</label>
                     </div>
                 </td>
-                <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white borderless">
+                <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white  item-name">
                     Apple iMac 27"
                 </th>
-                <td class="px-6 py-4 borderless">
+                <td class="px-6 py-4 item-color">
                     Silver
                 </td>
-                <td class="px-6 py-4 borderless">
+                <td class="px-6 py-4  item-cate">
                     PC Desktop
                 </td>
-                <td class="px-6 py-4 borderless">
+                <td class="px-6 py-4 item-price">
                     $3999
                 </td>
-                <td class="px-6 py-4 borderless">
+                <td class="px-6 py-4" onclick="toggleEdit() , edititem(this)">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
@@ -242,9 +345,14 @@
     </table>
 </div>
 
+
+
+
             </section>
         </main>
     </div>
+
+    
 
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -280,5 +388,7 @@
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     </div>
 
+
+    <script src="app.js"></script>
 </body>
 </html>

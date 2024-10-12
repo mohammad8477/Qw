@@ -71,7 +71,7 @@ th, td {
 }
 .bgcc{
     background-color: #181818;
-    
+
 }
 aside {
     width: 14%;
@@ -134,4 +134,29 @@ aside {
 .hover:hover{
     background-color: #2d2d2d;
     transition: 0.2s ease;
+}
+
+.onvisible{
+    visibility: hidden;
+}
+
+.transition-4{
+    transition-duration: 0.4s;
+}
+
+.my-bg{
+    background-color: rgba(0, 0, 0, 0.6);;
+}
+
+.blur{
+    filter: blur(6px);
+}
+
+.input:valid~label{
+    color: transparent;
+}
+
+.my-shadow{
+    transition-duration: 0.4s;
+    text-shadow: 0px 0px 5px red , 0px 0px 10px rgba(255, 0, 0, 0.6) , 0px 0px 15px rgba(255, 0, 0, 0.422);
 }
