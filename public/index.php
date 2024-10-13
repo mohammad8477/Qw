@@ -6,10 +6,10 @@ $pash = trim(str_replace('/mame/Qw/', '', parse_url($_SERVER['REQUEST_URI'], PHP
 
 $routes = [
     'GET' => [
-        'code' => ['controller' => 'App\\C\\Code', 'method' => 'index'], // استفاده از namespace درست
+        '' => ['controller' => 'App\\C\\indexpage', 'method' => 'index'],
+        'code' => ['controller' => 'App\\C\\Code', 'method' => 'index'],
         'sigin' => ['controller' => 'SIGIN', 'method' => 'index'],  
-        'sigup' => ['controller' => 'SIGUP', 'method' => 'index'],  
-        'index' => ['controller' => 'SAFE', 'method' => 'index'],   
+        'sigup' => ['controller' => 'SIGUP', 'method' => 'index'],   
         "index/buy/([0-9]+)" => ['controller' => 'BAY', 'method' => 'index'], 
         'admin' => ['controller' => 'ADMIN', 'method' => 'index'],
     ], 
@@ -17,7 +17,7 @@ $routes = [
 ]; 
 
 foreach ($routes[$_SERVER['REQUEST_METHOD']] as $route => $info) {
-    if (preg_match("#^$route$#", $pash)) {
+    if (preg_match("#^" . preg_quote($route, '#') . "$#", $pash)) {
         // ایجاد شیء کنترلر با استفاده از namespace
         if (class_exists($info['controller'])) {
             $controller = new $info['controller'](); // ایجاد شیء از کلاس
@@ -30,4 +30,6 @@ foreach ($routes[$_SERVER['REQUEST_METHOD']] as $route => $info) {
     }
 }
 
-echo (!$q) ? '404' : ' ';
+if (!$q) {
+  echo   require_once __DIR__ . "/../app/V/404 error/index.php"; 
+}

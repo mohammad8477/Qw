@@ -14,7 +14,7 @@
         
         <!-- Image -->
         <div class="flex w-full justify-center">
-            <img src="212-2123580_latest-news-404-dublin.png" alt="">
+            <img src="212-2123580_latest-news-404-dublin.png" alt="dddd">
         </div>
 
         <!-- Button -->
