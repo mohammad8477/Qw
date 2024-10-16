@@ -6,15 +6,18 @@ $pash = trim(str_replace('/mame/Qw/', '', parse_url($_SERVER['REQUEST_URI'], PHP
 
 $routes = [
     'GET' => [
+        'Creat_account' => ['controller' => 'App\\C\\Creat_account', 'method' => 'index'] ,  
         '' => ['controller' => 'App\\C\\indexpage', 'method' => 'index'],
+        'index' => ['controller' => 'App\\C\\indexpage', 'method' => 'index'],
         'code' => ['controller' => 'App\\C\\Code', 'method' => 'index'],
-        'sigin' => ['controller' => 'SIGIN', 'method' => 'index'],  
-        'sigup' => ['controller' => 'SIGUP', 'method' => 'index'],   
+        'sigup' => ['controller' => 'App\\C\\Creat_account', 'method' => 'index'] , //bogg    
+        'sigin' => ['controller' => 'App\\c\\Sigin', 'method' => 'index'], //bog  
+        'Forgot_password' => ['controller' => 'Forgot_password', 'method' => 'index'], //bog
         "index/buy/([0-9]+)" => ['controller' => 'BAY', 'method' => 'index'], 
         'admin' => ['controller' => 'ADMIN', 'method' => 'index'],
     ], 
     'POST' => []
-]; 
+];
 
 foreach ($routes[$_SERVER['REQUEST_METHOD']] as $route => $info) {
     if (preg_match("#^" . preg_quote($route, '#') . "$#", $pash)) {

@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <title>Login</title>
   <link rel="Icon" href="Untitled-3.svg">
-  <link rel="stylesheet" href="../../../src/output.css">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body class="montserrat-300">
+  <form action="" method="post">
 <!-- partial:index.partial.html -->
 <div class="container ">
-
   <!-- Text -->
   <div class="logo-div w-full flex justify-center mb-5">
     <span class="text-white montserrat-600 ">Login</span>
@@ -65,7 +65,7 @@
 
   <!-- Login btn -->
   <div class="justify-center flex mb-5">
-    <a href="https://discord.gg/2n3t5GUcyn" class="btb" target="_blank" ><button class="btu py-2 px-4 text-center justify-center">LOGIN</button></a>
+    <a href="https://discord.gg/2n3t5GUcyn" class="btb" target="_blank" ><button class="btu py-2 px-4 text-center justify-center" name="submit">LOGIN</button></a>
   </div>
 
   <!-- Forgot && creat account text -->
@@ -81,8 +81,9 @@
 
 
 </div>
+</form>
 <!-- partial -->
-  <script  src="./script.js"></script>
+  <script  src="css/script.js"></script>
 
 </body>
 </html>

@@ -12,6 +12,7 @@
 </head>
 </head>
 <body class="montserrat-300">
+  <form action="" method="post">
 <!-- partial:index.partial.html -->
 <div class="container">
 
@@ -40,12 +41,13 @@
 
   <!-- Login btn -->
   <div class="justify-center flex">
-    <a href="https://discord.gg/2n3t5GUcyn" class="btb" target="_blank" ><button class="btu py-2 px-4 text-center justify-center">LOGIN</button></a>
+    <a href="https://discord.gg/2n3t5GUcyn" class="btb" target="_blank" ><button class="btu py-2 px-4 text-center justify-center" name="submit">LOGIN</button></a>
   </div>
   
 </div>
+</form>
 <!-- partial -->
-  <script  src="./script.js"></script>
+  <script  src="css/sccript.js"></script>
 
 </body>
 </html>

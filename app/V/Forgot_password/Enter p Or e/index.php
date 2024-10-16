@@ -15,7 +15,7 @@
     <title>Forgot password</title>
 </head>
 <body class="bg-[#222] h-screen flex items-center justify-center">
-
+<form action="" method="post">
     <section class="bg-[#333]  mx-auto w-96 h-80 rounded-xl absolute">
         <!-- Text -->
         <div class="w-full text-center text-white montserrat-600 text-2xl mt-5">
@@ -41,7 +41,7 @@
             <!-- Img -->
             <div class=" w-1/2 flex justify-center">
                 <button class="text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="currentColor" class="bi bi-arrow-clockwise" name="submit" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"/>
                         <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"/>
                     </svg>
@@ -62,7 +62,7 @@
         </div>
 
     </section>
-    
+    </form>
 
 </body>
 </html>

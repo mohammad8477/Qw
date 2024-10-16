@@ -8,5 +8,6 @@ class User
     {}
     public function update()
     {}
-
+    public function selekt ()
+    {}
 }
