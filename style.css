@@ -1,0 +1,377 @@
+@import url(https://db.onlinewebfonts.com/c/068552e0b032d830e03cd78e8b6f7590?family=GT+Eesti+Pro+Display+Bold);
+@font-face {
+    font-family: "GT Eesti Pro Display Bold";
+    src: url("https://db.onlinewebfonts.com/t/068552e0b032d830e03cd78e8b6f7590.eot");
+    src: url("https://db.onlinewebfonts.com/t/068552e0b032d830e03cd78e8b6f7590.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/068552e0b032d830e03cd78e8b6f7590.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/068552e0b032d830e03cd78e8b6f7590.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/068552e0b032d830e03cd78e8b6f7590.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/068552e0b032d830e03cd78e8b6f7590.svg#GT Eesti Pro Display Bold")format("svg");
+}
+@font-face{
+  font-family: graphic;
+  src: url('Graphik Arabic Black.otf');
+  
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+button:focus, 
+input:focus, 
+textarea:focus {
+    outline: none; 
+}
+
+
+
+:root {
+  --cyberpunk-yellow: #f0e801;
+  --among-us-red: #c51110;
+  --fall-guys-pink: #fa40a3;
+  
+}
+
+body {
+  
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  place-items: center;
+  
+  
+  height: 100%!important;
+  
+}
+
+article {
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
+  display: flex;
+  align-items: center;
+  width: 15.5rem;
+  height: 5.5rem;
+  padding-left: 5.25rem;
+  border-radius: 1rem;
+  background: #ffffff;
+  cursor: pointer;
+  box-shadow: 6px 6px 5px -1px rgba(0,0,0,0.57);
+}
+.rtl{direction:rtl;text-align:right;}
+.background {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: -230px;
+  transform: translate(-3.5rem, -50%);
+  width: 300px;
+  height: 300px;
+  background: #5865F2;
+  transition: 0.3s all;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  z-index: 2;
+  transform: translate(0.75rem, -50%);
+  font-size: 2rem;
+  transition: 0.3s all;
+}
+
+.content {
+  font-size: 1.25rem;
+  
+}
+
+
+
+article:hover .background {
+  border-radius: 50%;
+  transform: translate(0, -50%);
+}
+
+.icon {
+  color: #5865F2;
+}
+.dis-blue{
+  
+  transition: 0.2 s;
+}
+.dis-blue:hover{
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 0px 20px 0 rgba(209, 197, 255, 0.329);
+  color: #5865F2;
+}
+
+article:hover .icon {
+  transform: translate(-10%, -50%);
+  color: #ffffff;
+}
+
+.bg-cyberpunk:hover {
+  background: var(--cyberpunk-yellow);
+}
+.bg-among-us:hover {
+  background: var(--among-us-red);
+}
+.bg-fall-guys:hover {
+  background: var(--fall-guys-pink);
+}
+
+* {
+  font-family: "graphic";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+.card1 {
+  transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  background-color:#1b1b1b;
+  border-radius: 1rem;
+}
+.dis{
+  
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  margin: 0;
+  padding: 1rem;
+  
+}
+article{
+  transition: 0.2s all;
+}
+article:hover{
+  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px rgba(88, 101, 242, 0.644), 0 0 100px rgba(0, 255, 255, 0.171);
+  transition: 0.2s all;
+}
+
+.name {
+  transform: translate3d(0, 0, 50px);
+  transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  opacity: 1;
+  transition: 0.3S all;
+}
+
+.card:hover .name {
+  top: 1.5rem;
+  transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  opacity: 1;
+}
+.buy {
+  left: 50%;
+  transform: translate3d(-50%, 0, 50px);
+  transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  
+}
+
+.card:hover .buy {
+  bottom: 1rem;
+  opacity: 1;
+}
+
+img {
+  transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  
+}
+
+.card:hover img {
+  transform: translate3d(0, 0, 50px);
+  transform-style: preserve-3d;
+}
+
+
+.image::before {
+  content: "";
+  border-radius: .25rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: .25rem;
+  opacity: 0;
+  transition: all .5s;
+}
+
+.card:hover .image::before {
+  opacity: .2;
+}
+
+.image-1::before {
+  background: center / cover url("VIP.gif");
+  
+}
+.image-2::before {
+  background: center / cover url("DENSHO.gif");
+}
+.image-3::before {
+  background: center / cover url("Sequence\ 01_2.gif");
+  
+}
+.image-4::before {
+  background: center / cover url("Sequence\ 01_4.gif");
+}
+.image-5::before {
+  background: center / cover url("Sequence\ 01_5.gif");
+  
+}
+
+.image-6::before {
+  background: center / cover url("Sequence\ 01_5.gif");
+  
+}
+
+.background-l{
+  
+  background-color: #1b1b1b;
+}
+
+.buy{
+
+  
+ 
+  
+  background-color: rgb(45, 32, 32);
+  
+  transition: ease-out 0.3s;
+  
+  outline: none;
+  
+  
+  
+
+}
+\\.buy:hover{
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+\\.buy:before{
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #42fbf2;
+  border-radius: 9999px;
+}
+\\.buy:hover:before{
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+}
+
+
+
+
+
+
+
+.card {
+  -moz-transform-style: flat;
+  transform-style: preserve-3d;
+  
+  
+}
+\\.image {
+  transform: translate3d(0, 0, 20px)!important;
+  transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+}
+
+
+.card:hover {
+  
+  transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  
+}
+
+.name {
+  
+  transform: translate3d(0, 0, 50px);
+  
+  transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+}
+.btu{
+  border-radius: 0.75rem;
+}
+.btu:hover{
+  cursor: pointer;
+  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px rgba(0, 255, 255, 0.644), 0 0 100px rgba(0, 255, 255, 0.171);
+  color: #005bc3;
+  transition: 0.3s all;
+}
+
+.btu:before{
+  transition: 0.3s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  
+}
+.btu:hover:before{
+  transition: 0.3s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+}
+.glass{
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+.my-w{
+  width: 90%;
+}
+@media only screen and (max-width: 1000px) {
+  .hidden {
+    display: none!important;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .nav {
+    display: none!important;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .ichide {
+    display: none!important;
+  }
+}
