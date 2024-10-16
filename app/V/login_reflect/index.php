@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>CodePen - A Pen by Coding Stella</title>
-  <link rel="stylesheet" href="../../../src/output.css">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
