@@ -12,14 +12,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <title>Creat Account</title>
     <link rel="Icon" href="css/Untitled-3.svg">
+    <style>
+     
+    </style>
 </head>
 <body class="d-flex justify-content-center align-items-center vh-100 montserrat-500">
 
-    <section class="container d-flex justify-content-center justify-content-md-between h-60 w-vh-50 radius ">
     <form action="" method="post">
+    <section class="container d-flex x justify-content-center justify-content-md-between h-60 w-vh-50 radius ">
         <!-- Logo -->
         <div class="w-50 d-none d-md-flex  justify-content-center">
-            <img class="logo w-60" src="Untitled-3.svg" alt="">
+            <img class="logo w-60" src="css/Untitled-3.svg" alt="">
         </div> 
 
         <!-- Inputs -->
@@ -94,22 +97,22 @@
                             <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"/>
                         </svg>
                     </button>
-                    </form>
-                    <img class="w-100" src="css/Untitled-3.svg" alt="">
+                   
                 </div>
-
+                
             </div>
-
+            
             <!-- Creat Button -->
             <div class="d-flex mt-3 justify-content-center ">
                 <a href="https://discord.gg/2n3t5GUcyn" class="btb  text-decoration-none w-100" target="_blank" ><button class="my-btu py-2 px-4 text-center justify-center">LOGIN</button></a>
             </div>
-
-
-
+            
+            
+            
         </div>
-
+        
     </section>
+</form>
 
 
     <script src="css/app.js"></script>
