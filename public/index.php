@@ -10,8 +10,9 @@ $routes = [
         '' => ['controller' => 'App\\C\\indexpage', 'method' => 'index'],
         'index' => ['controller' => 'App\\C\\indexpage', 'method' => 'index'],
         'code' => ['controller' => 'App\\C\\Code', 'method' => 'index'],
-        'sigup' => ['controller' => 'App\\C\\Creat_account', 'method' => 'index'] , //bogg    
-        'sigin' => ['controller' => 'App\\c\\Sigin', 'method' => 'index'], //bog  
+        'Product' => ['controller' => 'App\\C\\Product', 'method' => 'index'],
+        'sigup' => ['controller' => 'App\\C\\Creat_account', 'method' => 'index'] ,    
+        'sigin' => ['controller' => 'App\\c\\Sigin', 'method' => 'index'],  
         'Forgot_password' => ['controller' => 'Forgot_password', 'method' => 'index'], //bog
         "index/buy/([0-9]+)" => ['controller' => 'BAY', 'method' => 'index'], 
         'admin' => ['controller' => 'ADMIN', 'method' => 'index'],
