@@ -44,7 +44,7 @@
           </a>
         </div>
         <div class="focus:outline-none focus:ring-0">
-          <a href="https://discord.gg/alihero" target="_blank" class="card1" style="background: none;">
+          <a href="sigup" target="_blank" class="card1" style="background: none;">
             <button type="button" class="text-white dis-blue focus:outline-none focus:ring-0 font-medium rounded-lg text-m px-4 py-2 text-center md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700" style="scale: 130%; ">
               <i class="fa-solid fa-user"></i>
             </button>

@@ -75,7 +75,7 @@
     </div>
 
     <div>
-      <a class="creat-link transition-08" href="../Creat account/index.html">Don't have an accounr?</a>
+      <a class="creat-link transition-08" href="sigup">Don't have an accounr?</a>
     </div>
   </div>
 
