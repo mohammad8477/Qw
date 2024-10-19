@@ -1,69 +1,117 @@
 <?php 
 namespace App\M; 
-use App\M\Conect ; 
-use PDO ; 
-class User 
+
+use PDO; 
+use PDOException;
+
+class counn 
 {
-    public $conn ; 
+    public function __construct() // تغییر نام متد به connect
+    {
+        try {
+            $this->conn = new PDO("mysql:host=localhost;dbname=qw", 'root', ''); // اگر رمز عبور دارید، آن را وارد کنید
+            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
+            echo "خطا در اتصال به پایگاه داده: " . $e->getMessage(); // نمایش پیام خطا
+            $this->conn = null; // اطمینان از اینکه در صورت بروز خطا، $conn null باشد
+        }
+    }
+}
+class User extends counn 
+{
+    private $conn; 
+
     public function __construct()
     {
-        $this->conn =  new Conect(); 
+        parent::__construct() ; 
     }
-    public function add($name , $password , $communication)
+
+    public function add($name, $password, $communication)
     {
-   
+        // بررسی اتصال
+        if ($this->conn === null) {
+            echo "اتصال به پایگاه داده برقرار نیست.";
+            return false;
+        }
+
+        // هش کردن رمز عبور
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
         // اجرای استعلام INSERT
-        $sql = "INSERT INTO user (username,password,communication) VALUES (:name, :password, :communication)";
-        $stmt = $conn->prepare($sql);
+        $sql = "INSERT INTO user (username, password, communication) VALUES (:name, :password, :communication)";
+        $stmt = $this->conn->prepare($sql); 
         $stmt->bindParam(':name', $name);
-        $stmt->bindParam(':password', $password);
+        $stmt->bindParam(':password', $hashedPassword); // استفاده از رمز عبور هش شده
         $stmt->bindParam(':communication', $communication);
 
         if ($stmt->execute()) {
-            
+            echo 'با موفقیت اضافه شد'; 
+            return true; // موفقیت
         } else {
-            
+            echo "خطا در اضافه کردن کاربر: " . implode(", ", $stmt->errorInfo()); // پیام خطا
+            return false; // عدم موفقیت
         }
-    
-
-
     }
-    public function dell()
+
+    public function dell($idToDelete)
     {
-        
-    // $tableName = "qw";
-    // $idToDelete = 3; // شناسه رکوردی که می‌خواهید حذف شود
+        // بررسی اتصال
+        if ($this->conn === null) {
+            echo "اتصال به پایگاه داده برقرار نیست.";
+            return false;
+        }
 
+        // اجرای استعلام DELETE
+        $sql = "DELETE FROM user WHERE id = :id";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':id', $idToDelete);
 
-    // // اجرای استعلام DELETE
-    // $sql = "DELETE FROM $tableName WHERE id = :id";
-    // $stmt = $conn->prepare($sql);
-    // $stmt->bindParam(':id', $idToDelete);
-
-    // if ($stmt->execute()) {
-    //     echo "رکورد با موفقیت حذف شد.";
-    // } else {
-    //     echo "خطا در حذف رکورد: " . $stmt->errorInfo();
-    // }
-
+        if ($stmt->execute()) {
+            echo "رکورد با موفقیت حذف شد.";
+        } else {
+            echo "خطا در حذف رکورد: " . implode(", ", $stmt->errorInfo());
+        }
     }
-    public function update()
-    {}
-    public function selekt ($name , $serche )
+
+    public function update($id, $name, $password, $communication)
     {
+        // بررسی اتصال
+        if ($this->conn === null) {
+            echo "اتصال به پایگاه داده برقرار نیست.";
+            return false;
+        }
+
+        // پیاده‌سازی متد update
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        $sql = "UPDATE user SET username = :name, password = :password, communication = :communication WHERE id = :id";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':password', $hashedPassword);
+        $stmt->bindParam(':communication', $communication);
+        $stmt->bindParam(':id', $id);
+
+        if ($stmt->execute()) {
+            echo "رکورد با موفقیت به‌روزرسانی شد.";
+        } else {
+            echo "خطا در به‌روزرسانی رکورد: " . implode(", ", $stmt->errorInfo());
+        }
+    }
+
+    public function selekt($name, $serche)
+    {
+        // بررسی اتصال
+        if ($this->conn === null) {
+            echo "اتصال به پایگاه داده برقرار نیست.";
+            return false;
+        }
+
         $sql = "SELECT COUNT(*) AS count FROM user WHERE $name = :x";
-    $stmt = $conn->prepare($sql);
-    $stmt->bindParam(':x', $serche);
-    $stmt->execute();
-    
-    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        $stmt = $this->conn->prepare($sql); 
+        $stmt->bindParam(':x', $serche);
+        $stmt->execute();
+        
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($row['count'] > 0) {
-        return true  ; 
-    } else {
-        return false ; 
-    }
-
-
+        return $row['count'] > 0; 
     }
 }
