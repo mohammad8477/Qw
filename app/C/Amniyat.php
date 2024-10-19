@@ -2,8 +2,8 @@
 namespace App\C ; 
 class Amniyat
 {
-    public function __construct($r) 
+    public function qw ($r) 
     {
-        return htmlspecialchars($r) ; 
+        return htmlspecialchars($r , ENT_QUOTES , 'UTF-8'); ; 
     }
 }
