@@ -6,9 +6,13 @@ use PDOException;
 
 class counn 
 {
+<<<<<<< HEAD
     public  $conn; 
 
     public function __construct() 
+=======
+    public function __construct() // تغییر نام متد به connect
+>>>>>>> 9eb1903750561e4ff90d3c36e2962de7d4b55b3d
     {
         try {
             $this->conn = new PDO("mysql:host=localhost;dbname=qw", 'root', ''); // اگر رمز عبور دارید، آن را وارد کنید
@@ -21,14 +25,23 @@ class counn
 }
 class User extends counn 
 {
+<<<<<<< HEAD
     
     public function __construct()
     {
         parent::__construct();
+=======
+    private $conn; 
+
+    public function __construct()
+    {
+        parent::__construct() ; 
+>>>>>>> 9eb1903750561e4ff90d3c36e2962de7d4b55b3d
     }
 
     public function add($name, $password, $communication)
     {
+<<<<<<< HEAD
         try {
             $this->conn = new PDO("mysql:host=localhost;dbname=qw", 'root', ''); // اگر رمز عبور دارید، آن را وارد کنید
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -36,6 +49,8 @@ class User extends counn
             echo "خطا در اتصال به پایگاه داده: " . $e->getMessage(); // نمایش پیام خطا
             $this->conn = null; // اطمینان از اینکه در صورت بروز خطا، $conn null باشد
         }
+=======
+>>>>>>> 9eb1903750561e4ff90d3c36e2962de7d4b55b3d
         // بررسی اتصال
         if ($this->conn === null) {
             echo "اتصال به پایگاه داده برقرار نیست.";
@@ -43,7 +58,11 @@ class User extends counn
         }
 
         // هش کردن رمز عبور
+<<<<<<< HEAD
         $hashedPassword = ($password);
+=======
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+>>>>>>> 9eb1903750561e4ff90d3c36e2962de7d4b55b3d
 
         // اجرای استعلام INSERT
         $sql = "INSERT INTO user (username, password, communication) VALUES (:name, :password, :communication)";

@@ -3,7 +3,9 @@ require_once __DIR__ . '/../botstrap.php';
  
 new App\M\User() ;  
 $q = false;  
+$q = false;  
 
+$pash = trim(str_replace('/mame/Qw/', '', parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)), '/');  
 $pash = trim(str_replace('/mame/Qw/', '', parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)), '/');  
 
 $routes = [
@@ -20,6 +22,7 @@ $routes = [
         'admin' => ['controller' => 'ADMIN', 'method' => 'index'],
     ], 
     'POST' => [
+        
         'sigup' => ['controller' => 'App\\c\\Creat_account', 'method' => 'index'] , 
         'sigin' => ['controller' => 'App\\c\\Sigin', 'method' => 'index'] //bog
     ]
