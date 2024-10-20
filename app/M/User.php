@@ -51,6 +51,13 @@ class User
 
     public function dell($idToDelete)
     {
+     try {
+            $this->conn = new PDO("mysql:host=localhost;dbname=qw", 'root', ''); // اگر رمز عبور دارید، آن را وارد کنید
+            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
+            echo "خطا در اتصال به پایگاه داده: " . $e->getMessage(); // نمایش پیام خطا
+            $this->conn = null; // اطمینان از اینکه در صورت بروز خطا، $conn null باشد
+        }
         // بررسی اتصال
         if ($this->conn === null) {
             echo "اتصال به پایگاه داده برقرار نیست.";
@@ -71,6 +78,13 @@ class User
 
     public function update($id, $name, $password, $communication)
     {
+     try {
+            $this->conn = new PDO("mysql:host=localhost;dbname=qw", 'root', ''); // اگر رمز عبور دارید، آن را وارد کنید
+            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
+            echo "خطا در اتصال به پایگاه داده: " . $e->getMessage(); // نمایش پیام خطا
+            $this->conn = null; // اطمینان از اینکه در صورت بروز خطا، $conn null باشد
+        }
         // بررسی اتصال
         if ($this->conn === null) {
             echo "اتصال به پایگاه داده برقرار نیست.";
@@ -95,6 +109,13 @@ class User
 
     public function selekt($name, $serche)
     {
+     try {
+            $this->conn = new PDO("mysql:host=localhost;dbname=qw", 'root', ''); // اگر رمز عبور دارید، آن را وارد کنید
+            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
+            echo "خطا در اتصال به پایگاه داده: " . $e->getMessage(); // نمایش پیام خطا
+            $this->conn = null; // اطمینان از اینکه در صورت بروز خطا، $conn null باشد
+        }
         // بررسی اتصال
         if ($this->conn === null) {
             echo "اتصال به پایگاه داده برقرار نیست.";
