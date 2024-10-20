@@ -7,3 +7,4 @@ class Code
         echo 'ok'; 
     }
 }
+//this fille is bog
