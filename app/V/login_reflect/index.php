@@ -41,7 +41,7 @@
 
   <!-- Login btn -->
   <div class="justify-center flex">
-    <a href="https://discord.gg/2n3t5GUcyn" class="btb" target="_blank" ><button class="btu py-2 px-4 text-center justify-center" name="submit">LOGIN</button></a>
+    <button class="btu py-2 px-4 text-center justify-center btb" name="submit">LOGIN</button>
   </div>
   
 </div>

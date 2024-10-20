@@ -107,28 +107,38 @@ class User
         }
     }
 
-    public function selekt($name, $serche)
-    {
-     try {
-            $this->conn = new PDO("mysql:host=localhost;dbname=qw", 'root', ''); // اگر رمز عبور دارید، آن را وارد کنید
-            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        } catch (PDOException $e) {
-            echo "خطا در اتصال به پایگاه داده: " . $e->getMessage(); // نمایش پیام خطا
-            $this->conn = null; // اطمینان از اینکه در صورت بروز خطا، $conn null باشد
-        }
-        // بررسی اتصال
-        if ($this->conn === null) {
-            echo "اتصال به پایگاه داده برقرار نیست.";
-            return false;
-        }
-
-        $sql = "SELECT COUNT(*) AS count FROM user WHERE $name = :x";
-        $stmt = $this->conn->prepare($sql); 
-        $stmt->bindParam(':x', $serche);
-        $stmt->execute();
-        
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        return $row['count'] > 0; 
+    public function selekt($name1, $serche1, $name2, $serche2)
+{
+    try {
+        $this->conn = new PDO("mysql:host=localhost;dbname=qw", 'root', ''); // اگر رمز عبور دارید، آن را وارد کنید
+        $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch (PDOException $e) {
+        echo "خطا در اتصال به پایگاه داده: " . $e->getMessage(); // نمایش پیام خطا
+        $this->conn = null; // اطمینان از اینکه در صورت بروز خطا، $conn null باشد
     }
+    
+    // بررسی اتصال
+    if ($this->conn === null) {
+        echo "اتصال به پایگاه داده برقرار نیست.";
+        return false;
+    }
+
+    // پرس و جو برای بررسی وجود هر دو مقدار
+    $sql = "SELECT COUNT(*) AS count FROM user WHERE $name1 = :value1 AND $name2 = :value2";
+    $stmt = $this->conn->prepare($sql); 
+    $stmt->bindParam(':value1', $serche1);
+    $stmt->bindParam(':value2', $serche2);
+    $stmt->execute();
+    
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    // اگر هر دو مقدار وجود داشت، true برگردانید
+    if($row['count'] > 0){
+        return true ; 
+    } 
+    else 
+    {
+        return false ; 
+    }
+}
 }

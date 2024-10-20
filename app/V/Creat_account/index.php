@@ -105,10 +105,10 @@
                 </div> -->
 
                 </div>
-    
+                <a href="sigin"><p>you haw acc?...</p></a>
                 <!-- Creat Button -->
                 <div class="d-flex mt-3 justify-content-center ">
-                    <button type="submit"  name="submit" class="btb  text-decoration-none w-100 my-btu py-2 px-4 text-center justify-center">LOGIedN</button>
+                    <button type="submit"  name="submit" class="btb  text-decoration-none w-100 my-btu py-2 px-4 text-center justify-center">LOGIN</button>
                 </div>
                 
 

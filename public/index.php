@@ -17,9 +17,11 @@ $routes = [
         'Product' => ['controller' => 'App\\C\\Product', 'method' => 'index'],
         'sigup' => ['controller' => 'App\\C\\Creat_account', 'method' => 'index'] ,    
         'sigin' => ['controller' => 'App\\c\\Sigin', 'method' => 'index'],  
+        'update' => ['controller' => 'App\\c\\update', 'method' => 'index'],
         'Forgot_password' => ['controller' => 'Forgot_password', 'method' => 'index'], //bog
         "index/buy/([0-9]+)" => ['controller' => 'BAY', 'method' => 'index'], 
         'admin' => ['controller' => 'ADMIN', 'method' => 'index'],
+
     ], 
     'POST' => [
         
