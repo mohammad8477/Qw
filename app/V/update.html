@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>در حال آپدیت</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            color: #fff;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 50px 30px;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(15px);
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: slideIn 0.5s ease-in-out;
+        }
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            font-size: 36px;
+            margin: 0;
+            color: #ffcc00;
+            animation: fadeIn 1s ease-in;
+        }
+        p {
+            font-size: 20px;
+            color: #e0e0e0;
+            margin-top: 10px;
+            animation: fadeIn 1.5s ease-in;
+        }
+        .loader {
+            margin: 20px auto;
+            border: 8px solid rgba(255, 255, 255, 0.3);
+            border-top: 8px solid #ffcc00;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 14px;
+            color: #e0e0e0;
+            text-align: center;
+            width: 100%;
+        }
+        .social-icons {
+            margin-top: 15px;
+        }
+        .social-icons a {
+            color: #ffcc00;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #fff;
+        }
+        /* اضافه کردن افکت‌های جدید */
+        .glow {
+            text-shadow: 0 0 10px rgba(255, 204, 0, 0.7), 0 0 20px rgba(255, 204, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="glow">این صفحه در حال آپدیت است</h1>
+        <div class="loader"></div>
+        
+        </div>
+   
+    <div class="footer">© 2024 تمامی حقوق محفوظ است.</div>
+</body>
+</html>
