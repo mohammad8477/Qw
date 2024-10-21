@@ -9,8 +9,18 @@ clasS Backend
            if(isset($_POST['submit'])){
             $qw  = new User;
             $wq  = new Amniyat;  
-            $qw->selekt($wq->qw($_POST['email_input']) , 'communication' , $wq->qw($_POST['pass_input']) , 'password') ; 
-            echo 'اطلعات درست است ' ; 
+             
+            $t = $qw->selekt($wq->qw($_POST['email_input']) , 'communication' , $wq->qw($_POST['pass_input']) , 'password') ; 
+            if($t== true) 
+            {
+                echo 'اطلعات درست است ' ;
+            echo '<script>window.location.href = "index";</script>'; 
+
+
+            }
+            else {
+    
+            }
         }else {echo 'ok' ; }
     }
 }

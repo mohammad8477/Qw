@@ -106,44 +106,30 @@ class User
             echo "خطا در به‌روزرسانی رکورد: " . implode(", ", $stmt->errorInfo());
         }
     }
-
-    public function selekt($name1, $serche1, $name2, $serche2)
-    {
-        // لیست سفید برای نام‌های ستون
-        $validColumns = ['username', 'password']; // نام‌های معتبر ستون‌ها را اینجا وارد کنید
-        if (!in_array($name1, $validColumns) || !in_array($name2, $validColumns)) {
-
-            return false;
-        }
-    
-        try {
-            $this->conn = new PDO("mysql:host=localhost;dbname=qw", 'root', ''); 
-            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        } catch (PDOException $e) {
-            echo "خطا در اتصال به پایگاه داده: " . $e->getMessage(); 
-            $this->conn = null; 
-        }
+    public function selekt($name1 , $serche1, $name2 ,  $serche2)
+{
+    try {
+        $conn = new PDO("mysql:host=localhost;dbname=qw", 'root', '');
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         
-        if ($this->conn === null) {
-            echo "اتصال به پایگاه داده برقرار نیست.";
-            return false;
-        }
-    
-        $sql = "SELECT COUNT(*) AS count FROM user WHERE $name1 = :value1 AND $name2 = :value2";
-        $stmt = $this->conn->prepare($sql); 
-        $stmt->bindParam(':value1', $serche1);
-        $stmt->bindParam(':value2', $serche2);
-        
+        // استعلام برای بررسی وجود مقدار در دیتابیس
+        $sql = "SELECT COUNT(*) AS count FROM user WHERE communication = :value1 AND password = :value2"; // فرض می‌کنیم نام جدول شما "user" است
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':value1', $name1); // مقدار برای communication
+        $stmt->bindParam(':value2', $name2); // مقدار برای password
         $stmt->execute();
+        
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
     
         if ($row['count'] > 0) {
-            echo '<script>window.location.href = "index";</script>'; 
-            return true; 
+          return true ; 
         } else {
-         
-            echo 'رمز کاربری یا کلمه عبور اشتباه است ';  
-            return false; 
+ return false ; 
         }
+    } catch(PDOException $e) {
+        echo "خطا در اتصال به دیتابیس: " . $e->getMessage();
+    } finally {
+        $conn = null; // اطمینان از تخلیه اتصال
     }
+}
 }
