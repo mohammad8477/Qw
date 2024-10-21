@@ -26,7 +26,8 @@ $routes = [
     'POST' => [
         
         'sigup' => ['controller' => 'App\\c\\Creat_account', 'method' => 'index'] , 
-        'sigin' => ['controller' => 'App\\c\\Sigin', 'method' => 'index'] //bog
+        'sigin' => ['controller' => 'App\\c\\Sigin', 'method' => 'index'],  
+
     ]
 ];
 
@@ -34,7 +35,7 @@ foreach ($routes[$_SERVER['REQUEST_METHOD']] as $route => $info) {
     if (preg_match("#^" . preg_quote($route, '#') . "$#", $pash)) {
         // ایجاد شیء کنترلر با استفاده از namespace
         if (class_exists($info['controller'])) {
-            $controller = new $info['controller'](); // ایجاد شیء از کلاس
+            $controller = new $info['controller']();
             if (method_exists($controller, $info['method'])) {
                ($controller->{$info['method']}());
                exit  ; 

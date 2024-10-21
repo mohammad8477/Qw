@@ -1,3 +1,4 @@
+<?php require_once  'Backend.php' ; ?>
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -22,7 +23,7 @@
 
   <!-- Email input -->
   <div class="inputArea mb-4 fld montserrat-600">
-    <input class="email-label" required valid  placeholder=" " type="text" name="email-input" autocomplete="off">
+    <input class="email-label" required valid  placeholder=" " type="text" name="email_input" autocomplete="off">
     <label for="email-input">email or phone number</label>
   </div>
 
@@ -32,7 +33,7 @@
     <div class="pass-bg pass-bg-min">
     </div>
 
-    <input class="montserrat-600" required placeholder=" " type="password" name="pass-input" autocomplete="off" id="YourPassword">
+    <input class="montserrat-600" required placeholder=" " type="password" name="pass_input" autocomplete="off" id="YourPassword">
     <label class="pass-label" for="pass-input">password</label>
     <span class="eye-icon" onclick="togglePassword()"><i class="fas fa-eye"></i></span>
   </div>

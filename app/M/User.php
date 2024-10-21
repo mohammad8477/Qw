@@ -134,11 +134,13 @@ class User
 
     // اگر هر دو مقدار وجود داشت، true برگردانید
     if($row['count'] > 0){
+        echo '<script>window.location.href = "index";</script>'; // تغییر URL
         return true ; 
+
     } 
     else 
     {
-        return false ; 
+        echo 'رمز کاربری یا کلمه عبور اشتباه است ' ;  
     }
 }
 }
