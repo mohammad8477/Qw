@@ -49,7 +49,7 @@
 
   <!-- Login btn -->
   <div class="justify-center flex mb-5">
- <button class="btb btu py-2 px-4 text-center justify-center" name="submit">LOGIN</button>
+ <button class="btb btu py-2 px-4 text-center justify-center" type="submit" name="submit">LOGIN</button>
   </div>
 
   <!-- Forgot && creat account text -->

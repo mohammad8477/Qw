@@ -4,15 +4,14 @@ use app\M\User;
 use App\C\Amniyat ; 
 clasS Backend
 {
-    public function index()
+    public function __construct()
     {
-        echo 'okfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff' ; 
-        exit ; 
-        if(isset($_POST['submit'])){
+           if(isset($_POST['submit'])){
             $qw  = new User;
             $wq  = new Amniyat;  
             $qw->selekt($wq->qw($_POST['email_input']) , 'communication' , $wq->qw($_POST['pass_input']) , 'password') ; 
-        }
+            echo 'اطلعات درست است ' ; 
+        }else {echo 'ok' ; }
     }
 }
 //this files is bog 
